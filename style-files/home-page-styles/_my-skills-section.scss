@@ -1,0 +1,30 @@
+@import "../global-definitions";
+@import "../components/skill-item";
+
+.skills-section {
+  @include general-section-control();
+  overflow: hidden;
+  isolation: isolate;
+
+  &-content {
+    @include flexbox-control(column);
+    gap: 30px;
+  }
+
+  & h2 {
+    margin-bottom: 60px;
+  }
+}
+
+.my-skills-icon {
+  width: 100px;
+}
+
+.circle-shape {
+  position: absolute;
+  bottom: -110px;
+  left: -400px;
+  z-index: -5;
+  width: 700px;
+  opacity: 50%;
+}

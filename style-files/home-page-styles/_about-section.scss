@@ -1,0 +1,24 @@
+@import "../global-definitions";
+@import "../components/btn-primary";
+
+.about-section {
+  @include general-section-control();
+  &-content {
+    @include flexbox-control(column);
+    gap: 50px;
+
+    & img {
+      position: absolute;
+      top: 120px;
+      left: -40px;
+      z-index: -5;
+    }
+  }
+
+  & p {
+    @include font-and-letterspacing-control($secondaryFont, 400, 1px);
+    line-height: 25px;
+    backdrop-filter: blur(4px);
+    // might need to make this a general style for all p tags
+  }
+}

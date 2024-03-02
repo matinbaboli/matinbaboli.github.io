@@ -1,0 +1,23 @@
+@import "../global-definitions";
+@import "../components/go-to-projects-link";
+
+.projects-section {
+  @include general-section-control();
+
+  &-content {
+    @include flexbox-control(column);
+    gap: 25px;
+  }
+
+  & img {
+    width: 130px;
+  }
+
+  & h2 {
+    margin-bottom: 60px;
+  }
+  a {
+    width: 100%;
+    height: auto;
+  }
+}

@@ -1,0 +1,31 @@
+@import "../global-definitions";
+
+.skill-item-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  justify-items: center;
+  gap: 30px 0;
+  width: clamp(1px, 100%, 500px);
+  //   there was an error with min() about units not matching so i was forced to use clamp()
+}
+
+.skill-item {
+  @include font-and-letterspacing-control($mainFont, 400, 3px, 1.1);
+  text-align: center;
+
+  &-icon-area {
+    width: clamp(60px, 20vw, 74px);
+    height: 74px;
+    margin-bottom: 15px;
+    border: 2px solid $primary-color;
+    border-radius: 4px;
+    box-shadow: 0px 1px 3px $primary-color, 0px 5px 15px -2px $primary-color;
+    background: adjust-color($background-color, $lightness: -3%);
+    @include flexbox-control();
+
+    & img {
+      width: 50px;
+    }
+  }
+}

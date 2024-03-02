@@ -1,0 +1,73 @@
+@import url("https://fonts.googleapis.com/css2?family=Akshar:wght@400..700&family=Bangers&family=Be+Vietnam+Pro:wght@400;500&family=Protest+Revolution&display=swap");
+
+$primary-color: #0072eb;
+$primary-color-dirty: #3b72ad;
+$primary-color-dark: #38434f;
+$secondary-color: #eb9500;
+$secondary-color-dirty: #b5893c;
+$background-color: #262626;
+
+$mainFont: "Akshar";
+$secondaryFont: "Be Vietnam Pro";
+$baseFontSize: 12px;
+
+$generalBlockPadding: 150px;
+$generalInlinePadding: 30px;
+
+@mixin font-and-letterspacing-control(
+  $fontFamily,
+  $fontWeight,
+  $spaceOfLetters,
+  $multiplier: 1
+) {
+  $calculatedFontSize: $baseFontSize * $multiplier;
+
+  font-family: $fontFamily;
+  font-weight: $fontWeight;
+  letter-spacing: $spaceOfLetters;
+  font-size: $calculatedFontSize;
+}
+
+@mixin flexbox-control(
+  $direction: row,
+  $justifyContent: center,
+  $alignItems: center
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justifyContent;
+  align-items: $alignItems;
+}
+
+@mixin general-section-control {
+  position: relative;
+  padding-block: $generalBlockPadding;
+  padding-inline: $generalInlinePadding;
+  background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0) 40% 20px
+    ),
+    $background-color;
+  isolation: isolate;
+}
+
+body {
+  color: white;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+h1,
+h2 {
+  @include font-and-letterspacing-control($mainFont, 700, 7px, 2.5);
+}

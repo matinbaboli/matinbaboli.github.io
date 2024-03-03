@@ -5,17 +5,52 @@
   height: 700px;
   text-align: center;
   @include flexbox-control(column);
-  background: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.5),
-      rgba(0, 0, 0, 0) 15% 20px
-    ),
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 250px),
     linear-gradient(
       140deg,
-      adjust-color($primary-color, $lightness: +10%, $alpha: -0.85) 10%,
-      adjust-color($secondary-color, $lightness: +10%, $alpha: -0.85) 90% 200px
+      adjust-color($primary-color, $lightness: +10%) 10%,
+      adjust-color($secondary-color, $lightness: +10%) 90% 200px
     ),
-    #3d3d3d;
+    url("../../images/texture35yu.jpg");
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: soft-light;
+  isolation: isolate;
+
+  .hero-shapes-container {
+    position: relative;
+    width: 100%;
+    // needs less width on bigger screens
+    & :nth-child(1),
+    & :nth-child(2) {
+      position: absolute;
+      top: 10px;
+      left: -100px;
+      z-index: -3;
+      width: 380px;
+    }
+
+    & :nth-child(1) {
+      transform: rotate(-30deg) translate(90px, 150px);
+      width: 300px;
+    }
+  }
+
+  .hero-section-shape-big {
+    position: absolute;
+    z-index: -2;
+    top: 0;
+    left: 0px;
+    filter: drop-shadow(5px -5px 8px $primary-color);
+  }
+  .hero-section-shape-small {
+    position: absolute;
+    z-index: -2;
+    top: 120px;
+    left: 150px;
+    width: 130px;
+    filter: drop-shadow(3px -8px 8px $secondary-color);
+  }
 
   & h1 {
     font-size: $baseFontSize * 3;

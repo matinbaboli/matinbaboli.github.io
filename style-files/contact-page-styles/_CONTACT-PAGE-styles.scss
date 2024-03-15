@@ -1,0 +1,76 @@
+.contact-me-section {
+  @include general-section-control();
+  & h1 {
+    text-align: center;
+  }
+
+  &-content {
+    @include font-and-letterspacing-control($mainFont, 500, 3px, 1.1);
+    @include flexbox-control(column, center, center);
+    gap: 40px;
+  }
+}
+
+.email-option-container {
+  @include flexbox-control(column);
+  gap: 30px;
+  width: 100%;
+  padding-top: 105px;
+  @include font-and-letterspacing-control($mainFont, 400, 3px, 1.2);
+}
+
+.social-links {
+  list-style: none;
+  & li {
+    display: block;
+    padding-inline: 15px;
+    padding-bottom: 15px;
+    // width: 50px;
+  }
+  & a {
+    color: $secondary-color;
+    &:hover {
+      filter: drop-shadow(0px 0px 5px $secondary-color);
+    }
+  }
+
+  & img {
+    width: 25px;
+    margin-right: 5px;
+    transform: translateY(5px);
+  }
+}
+
+@include mid-screen-meida {
+  .contact-me-section {
+    & h1 {
+      text-align: start;
+    }
+  }
+  .contact-me-section-content {
+    @include flexbox-control(column, center, start);
+    padding-left: 40px;
+  }
+
+  .email-option-container {
+    @include flexbox-control(row, space-between, center);
+    width: 500px;
+  }
+
+  .social-links {
+    & li {
+      display: inline;
+    }
+    & img {
+      width: 30px;
+    }
+  }
+}
+@include big-screen-meida {
+  .contact-me-section {
+    padding-inline: $generalInlinePadding + 100px;
+  }
+  .email-option-container {
+    @include flexbox-control(row, space-between, center);
+  }
+}

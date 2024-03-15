@@ -42,6 +42,8 @@ $generalInlinePadding: 30px;
 
 @mixin general-section-control {
   position: relative;
+  box-sizing: border-box;
+  min-height: 100vh;
   padding-block: $generalBlockPadding;
   padding-inline: $generalInlinePadding;
   background: linear-gradient(
@@ -82,7 +84,7 @@ a {
 
 h1,
 h2 {
-  @include font-and-letterspacing-control($mainFont, 700, 7px, 2);
+  @include font-and-letterspacing-control($mainFont, 700, 7px, 2.2);
 }
 .section-half {
   width: 100%;

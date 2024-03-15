@@ -23,7 +23,7 @@ h2 {
   font-family: "Akshar";
   font-weight: 700;
   letter-spacing: 7px;
-  font-size: calc(var(--baseFontSize) * 2);
+  font-size: calc(var(--baseFontSize) * 2.2);
 }
 
 .section-half {
@@ -224,7 +224,148 @@ h2 {
   font-family: "Akshar";
   font-weight: 700;
   letter-spacing: 7px;
-  font-size: calc(var(--baseFontSize) * 2);
+  font-size: calc(var(--baseFontSize) * 2.2);
+}
+
+.section-half {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 25px;
+}
+
+@media (min-width: 600px) {
+  :root {
+    --baseFontSize: 15px;
+  }
+  .section-half {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1000px) {
+  :root {
+    --baseFontSize: 18px;
+  }
+}
+
+.footer-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #b5893c;
+  padding-block: 40px;
+  padding-inline: 30px;
+  font-family: "Akshar";
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-size: calc(var(--baseFontSize) * 1.05);
+  text-align: center;
+}
+
+.footer-navigation p {
+  font-family: "Akshar";
+  font-weight: 400;
+  letter-spacing: 3px;
+  font-size: calc(var(--baseFontSize) * 1);
+  margin-top: 20px;
+}
+
+.footer-navigation li {
+  margin-bottom: 15px;
+}
+
+.footer-navigation img {
+  display: none;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 600px) {
+  .footer-navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: start;
+    padding-inline: 50px;
+  }
+  .footer-navigation p {
+    margin-top: 0px;
+  }
+  .footer-navigation-links, .footer-navigation-logo-and-text {
+    height: 110px;
+  }
+  .footer-navigation-logo-and-text {
+    text-align: center;
+  }
+  .footer-navigation-logo-and-text img {
+    display: block;
+    width: 170px;
+    margin-inline: auto;
+  }
+}
+
+@media (min-width: 1000px) {
+  .footer-navigation {
+    padding-inline: 130px;
+  }
+}
+
+:root {
+  --baseFontSize: 12px;
+}
+
+body {
+  color: white;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+h1,
+h2 {
+  font-family: "Akshar";
+  font-weight: 700;
+  letter-spacing: 7px;
+  font-size: calc(var(--baseFontSize) * 2.2);
 }
 
 .section-half {
@@ -377,7 +518,7 @@ h2 {
   font-family: "Akshar";
   font-weight: 700;
   letter-spacing: 7px;
-  font-size: calc(var(--baseFontSize) * 2);
+  font-size: calc(var(--baseFontSize) * 2.2);
 }
 
 .section-half {
@@ -437,7 +578,7 @@ h2 {
   font-family: "Akshar";
   font-weight: 700;
   letter-spacing: 7px;
-  font-size: calc(var(--baseFontSize) * 2);
+  font-size: calc(var(--baseFontSize) * 2.2);
 }
 
 .section-half {
@@ -477,7 +618,7 @@ h2 {
   background: #eb9500;
   border-radius: 7px;
   padding-inline: 27px;
-  padding-block: 5px;
+  padding-block: 7px;
   font-family: "Akshar";
   font-weight: 500;
   letter-spacing: 3px;
@@ -496,6 +637,9 @@ h2 {
 
 .about-section {
   position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-height: 100vh;
   padding-block: 150px;
   padding-inline: 30px;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0) 50% 400px, rgba(0, 0, 0, 0.7)), #1a1a1a;
@@ -587,7 +731,7 @@ h2 {
   font-family: "Akshar";
   font-weight: 700;
   letter-spacing: 7px;
-  font-size: calc(var(--baseFontSize) * 2);
+  font-size: calc(var(--baseFontSize) * 2.2);
 }
 
 .section-half {
@@ -647,7 +791,7 @@ h2 {
   font-family: "Akshar";
   font-weight: 700;
   letter-spacing: 7px;
-  font-size: calc(var(--baseFontSize) * 2);
+  font-size: calc(var(--baseFontSize) * 2.2);
 }
 
 .section-half {
@@ -761,6 +905,9 @@ h2 {
 
 .projects-section {
   position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-height: 100vh;
   padding-block: 150px;
   padding-inline: 30px;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0) 50% 400px, rgba(0, 0, 0, 0.7)), #1a1a1a;
@@ -857,7 +1004,7 @@ h2 {
   font-family: "Akshar";
   font-weight: 700;
   letter-spacing: 7px;
-  font-size: calc(var(--baseFontSize) * 2);
+  font-size: calc(var(--baseFontSize) * 2.2);
 }
 
 .section-half {
@@ -917,7 +1064,7 @@ h2 {
   font-family: "Akshar";
   font-weight: 700;
   letter-spacing: 7px;
-  font-size: calc(var(--baseFontSize) * 2);
+  font-size: calc(var(--baseFontSize) * 2.2);
 }
 
 .section-half {
@@ -1004,6 +1151,9 @@ h2 {
 
 .skills-section {
   position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-height: 100vh;
   padding-block: 150px;
   padding-inline: 30px;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0) 50% 400px, rgba(0, 0, 0, 0.7)), #1a1a1a;
@@ -1064,109 +1214,112 @@ h2 {
   }
 }
 
-:root {
-  --baseFontSize: 12px;
-}
-
-body {
-  color: white;
-}
-
-button {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-a {
-  text-decoration: none;
-  color: white;
-}
-
-h1,
-h2 {
-  font-family: "Akshar";
-  font-weight: 700;
-  letter-spacing: 7px;
-  font-size: calc(var(--baseFontSize) * 2);
-}
-
-.section-half {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 25px;
-}
-
-@media (min-width: 600px) {
-  :root {
-    --baseFontSize: 15px;
-  }
-  .section-half {
-    width: 50%;
-  }
-}
-
-@media (min-width: 1000px) {
-  :root {
-    --baseFontSize: 18px;
-  }
-}
-
-.footer-navigation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background: #b5893c;
-  padding-block: 40px;
+.contact-me-section {
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-height: 100vh;
+  padding-block: 150px;
   padding-inline: 30px;
-  font-family: "Akshar";
-  font-weight: 400;
-  letter-spacing: 2px;
-  font-size: calc(var(--baseFontSize) * 1.05);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0) 50% 400px, rgba(0, 0, 0, 0.7)), #1a1a1a;
+  isolation: isolate;
+}
+
+.contact-me-section h1 {
   text-align: center;
 }
 
-.footer-navigation p {
+.contact-me-section-content {
+  font-family: "Akshar";
+  font-weight: 500;
+  letter-spacing: 3px;
+  font-size: calc(var(--baseFontSize) * 1.1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 40px;
+}
+
+.email-option-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 30px;
+  width: 100%;
+  padding-top: 105px;
   font-family: "Akshar";
   font-weight: 400;
   letter-spacing: 3px;
-  font-size: calc(var(--baseFontSize) * 1);
-  margin-top: 20px;
+  font-size: calc(var(--baseFontSize) * 1.2);
 }
 
-.footer-navigation li {
-  margin-bottom: 15px;
+.social-links {
+  list-style: none;
 }
 
-.footer-navigation img {
-  display: none;
-  margin-bottom: 20px;
+.social-links li {
+  display: block;
+  padding-inline: 15px;
+  padding-bottom: 15px;
+}
+
+.social-links a {
+  color: #eb9500;
+}
+
+.social-links a:hover {
+  -webkit-filter: drop-shadow(0px 0px 5px #eb9500);
+          filter: drop-shadow(0px 0px 5px #eb9500);
+}
+
+.social-links img {
+  width: 25px;
+  margin-right: 5px;
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
 }
 
 @media (min-width: 600px) {
-  .footer-navigation {
+  .contact-me-section h1 {
+    text-align: start;
+  }
+  .contact-me-section-content {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    padding-left: 40px;
+  }
+  .email-option-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1180,27 +1333,33 @@ h2 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    text-align: start;
-    padding-inline: 50px;
+    width: 500px;
   }
-  .footer-navigation p {
-    margin-top: 0px;
+  .social-links li {
+    display: inline;
   }
-  .footer-navigation-links, .footer-navigation-logo-and-text {
-    height: 110px;
-  }
-  .footer-navigation-logo-and-text {
-    text-align: center;
-  }
-  .footer-navigation-logo-and-text img {
-    display: block;
-    width: 170px;
-    margin-inline: auto;
+  .social-links img {
+    width: 30px;
   }
 }
 
 @media (min-width: 1000px) {
-  .footer-navigation {
+  .contact-me-section {
     padding-inline: 130px;
+  }
+  .email-option-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
 }

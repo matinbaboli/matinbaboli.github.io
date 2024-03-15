@@ -7,6 +7,14 @@
   &-content {
     @include flexbox-control(column);
     gap: 25px;
+
+    .projects-link-explanation {
+      @include font-and-letterspacing-control($secondaryFont, 400, 3px);
+      width: 350px;
+      height: 100px;
+      line-height: 25px;
+      display: none;
+    }
   }
 
   & img {
@@ -19,5 +27,20 @@
   a {
     width: 100%;
     height: auto;
+  }
+}
+
+@include mid-screen-meida {
+  .projects-section {
+    &-content {
+      @include flexbox-control();
+      .projects-link-explanation {
+        display: block;
+        visibility: hidden;
+      }
+    }
+    & h2 {
+      margin-bottom: 20px;
+    }
   }
 }

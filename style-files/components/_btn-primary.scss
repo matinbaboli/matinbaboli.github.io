@@ -4,8 +4,8 @@
   background: $secondary-color;
   border-radius: 7px;
   padding-inline: 27px;
-  padding-block: 9px;
-  @include font-and-letterspacing-control($mainFont, 500, 3px, 1.4);
+  padding-block: 5px;
+  @include font-and-letterspacing-control($mainFont, 500, 3px, 1.2);
   cursor: pointer;
   transition: box-shadow 150ms linear;
   &:hover {

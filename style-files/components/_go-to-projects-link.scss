@@ -17,7 +17,7 @@
   background-position: center;
   background-size: cover;
   background-blend-mode: darken;
-  @include font-and-letterspacing-control($mainFont, 600, 7px, 2);
+  @include font-and-letterspacing-control($mainFont, 600, 7px, 1.6);
   transition: padding 300ms ease-in-out;
 
   h3 {
@@ -27,7 +27,7 @@
 
   p {
     opacity: 0%;
-    font-size: $baseFontSize;
+    font-size: #{var(--baseFontSize)};
     transform: translate(40px, 40px);
     padding-top: 10px;
     padding-left: 10px;

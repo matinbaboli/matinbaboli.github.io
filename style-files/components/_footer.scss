@@ -1,18 +1,56 @@
 @import "../global-definitions";
 
-.footer-navbar-links {
+.footer-navigation {
+  @include flexbox-control(column);
   background: $secondary-color-dirty;
   padding-block: 40px;
   padding-inline: $generalInlinePadding;
-  @include font-and-letterspacing-control($secondaryFont, 500, 1px, 1.2);
+  @include font-and-letterspacing-control($mainFont, 400, 2px, 1.05);
   text-align: center;
 
   & p {
-    @include font-and-letterspacing-control($mainFont, 300, 3px);
-    margin-top: 50px;
+    @include font-and-letterspacing-control($mainFont, 400, 3px);
+    margin-top: 20px;
   }
 
   & li {
+    margin-bottom: 15px;
+  }
+
+  & img {
+    display: none;
     margin-bottom: 20px;
+  }
+}
+
+@include mid-screen-meida {
+  .footer-navigation {
+    @include flexbox-control(row, space-between, center);
+    text-align: start;
+    padding-inline: $generalInlinePadding + 20px;
+
+    & p {
+      margin-top: 0px;
+    }
+    &-links,
+    &-logo-and-text {
+      height: 110px;
+    }
+
+    &-logo-and-text {
+      text-align: center;
+
+      & img {
+        display: block;
+        width: 170px;
+        margin-inline: auto;
+      }
+    }
+  }
+}
+
+@include big-screen-meida {
+  .footer-navigation {
+    padding-inline: $generalInlinePadding + 100px;
   }
 }

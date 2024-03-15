@@ -16,8 +16,9 @@
     @include flexbox-control(null, space-between, end);
   }
 
-  &_logo {
+  &_logo img {
     transform: translateY(-5px);
+    width: 120px;
   }
 }
 
@@ -63,4 +64,45 @@
 
 .menu-open {
   transform: translateX(0px);
+}
+
+.navbar-links-big-screen {
+  display: none;
+  height: 100%;
+  @include font-and-letterspacing-control($mainFont, 500, 3px, 1);
+  & ul {
+    height: 100%;
+    gap: 30px;
+    @include flexbox-control(0, 0, end);
+    & li {
+      padding-bottom: 20px;
+    }
+  }
+}
+
+@include mid-screen-meida {
+  .navbar-links {
+    width: 350px;
+  }
+  .header-navbar_logo img {
+    width: 135px;
+  }
+}
+
+@include big-screen-meida {
+  .header-navbar {
+    & div {
+      padding: 0 80px 10px 80px;
+    }
+  }
+  .navbar-links-big-screen {
+    display: block;
+  }
+
+  .open-menu-btn {
+    display: none;
+  }
+  .navbar-links {
+    display: none;
+  }
 }

@@ -19,6 +19,23 @@
     @include font-and-letterspacing-control($secondaryFont, 400, 1px);
     line-height: 25px;
     backdrop-filter: blur(4px);
+    margin-top: 40px;
     // might need to make this a general style for all p tags
+  }
+}
+
+@include mid-screen-meida {
+  .about-section {
+    &-content {
+      @include flexbox-control(row, center, start);
+    }
+    & p {
+      letter-spacing: 2px;
+      line-height: 35px;
+      margin-left: 50px;
+    }
+  }
+  .about-text-container {
+    width: 55%;
   }
 }

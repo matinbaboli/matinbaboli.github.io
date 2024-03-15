@@ -28,3 +28,11 @@
   width: 700px;
   opacity: 50%;
 }
+
+@include mid-screen-meida {
+  .skills-section {
+    &-content {
+      @include flexbox-control();
+    }
+  }
+}

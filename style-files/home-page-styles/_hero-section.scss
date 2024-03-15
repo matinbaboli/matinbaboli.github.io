@@ -17,47 +17,65 @@
   background-blend-mode: soft-light;
   isolation: isolate;
 
-  .hero-shapes-container {
-    position: relative;
-    width: 100%;
-    // needs less width on bigger screens
-    & :nth-child(1),
-    & :nth-child(2) {
-      position: absolute;
-      top: 10px;
-      left: -100px;
-      z-index: -3;
-      width: 380px;
-    }
-
-    & :nth-child(1) {
-      transform: rotate(-30deg) translate(90px, 150px);
-      width: 300px;
-    }
-  }
-
-  .hero-section-shape-big {
-    position: absolute;
-    z-index: -2;
-    top: 0;
-    left: 0px;
-    filter: drop-shadow(5px -5px 8px $primary-color);
-  }
-  .hero-section-shape-small {
-    position: absolute;
-    z-index: -2;
-    top: 120px;
-    left: 150px;
-    width: 130px;
-    filter: drop-shadow(3px -8px 8px $secondary-color);
-  }
-
   & h1 {
-    font-size: $baseFontSize * 3;
+    font-size: calc(var(--baseFontSize) * 3.5);
     margin-bottom: 15px;
   }
 
   & p {
     @include font-and-letterspacing-control("Bangers", 300, 4px, 1.2);
+  }
+}
+
+.hero-shapes-container {
+  position: relative;
+  width: 100%;
+  & :nth-child(1),
+  & :nth-child(2) {
+    position: absolute;
+    top: 10px;
+    left: -100px;
+    width: 250px;
+  }
+
+  & :nth-child(1) {
+    transform: rotate(-30deg) translate(100px, 150px);
+    width: 250px;
+  }
+}
+
+.hero-section-shape-big {
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  left: 0px;
+  filter: drop-shadow(5px -5px 5px $primary-color);
+  width: 165px;
+}
+.hero-section-shape-small {
+  position: absolute;
+  z-index: -2;
+  top: 120px;
+  left: 150px;
+  width: 110px;
+  filter: drop-shadow(3px -4px 5px $secondary-color);
+}
+
+@include mid-screen-meida {
+  .hero-shapes-container {
+    width: 80%;
+  }
+
+  .hero-section-shape-big {
+    width: 185px;
+  }
+
+  .hero-section-shape-small {
+    width: 130px;
+  }
+}
+@include big-screen-meida {
+  .hero-shapes-container {
+    width: 70%;
   }
 }

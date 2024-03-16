@@ -92,6 +92,16 @@ h2 {
   gap: 25px;
 }
 
+.divider-shape {
+  position: absolute;
+  width: 100%;
+  height: 80px;
+  transform: scaleX(-1);
+  // transform: scale(-1, -1);
+  bottom: 0;
+  left: 0;
+}
+
 @include mid-screen-meida {
   :root {
     --baseFontSize: 15px;

@@ -1,5 +1,3 @@
-@import "../global-definitions";
-
 .footer-navigation {
   @include flexbox-control(column);
   background: $secondary-color-dirty;

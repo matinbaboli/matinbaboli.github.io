@@ -1,4 +1,4 @@
-.contact-me-section {
+.contact-me-page {
   @include general-section-control();
   & h1 {
     text-align: center;
@@ -42,12 +42,12 @@
 }
 
 @include mid-screen-meida {
-  .contact-me-section {
+  .contact-me-page {
     & h1 {
       text-align: start;
     }
   }
-  .contact-me-section-content {
+  .contact-me-page-content {
     @include flexbox-control(column, center, start);
     padding-left: 40px;
   }
@@ -67,7 +67,7 @@
   }
 }
 @include big-screen-meida {
-  .contact-me-section {
+  .contact-me-page {
     padding-inline: $generalInlinePadding + 100px;
   }
   .email-option-container {

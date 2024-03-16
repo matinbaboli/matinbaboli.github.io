@@ -4,8 +4,8 @@ const navbarLinks = document.getElementById('navbar-links-id')
 const projectsLinkExplanation = document.querySelector('.projects-link-explanation')
 const projectsPageLinkNodes = document.querySelectorAll('#projects-link')
 const projectsPageLinkArray = Array.from(projectsPageLinkNodes)
-
-console.log(projectsPageLinkArray)
+const bigScreenNavbarLinks = document.querySelectorAll('.navbar-links-big-screen a')
+console.log(bigScreenNavbarLinks)
 
 
 projectsPageLinkArray.forEach((link) => {
@@ -34,4 +34,26 @@ openMenuButton.addEventListener("click", () => {
 closeMenuButton.addEventListener("click", () => {
     navbarLinks.classList.remove('menu-open')
     openMenuButton.style.visibility = 'visible'
+})
+
+bigScreenNavbarLinks.forEach(hoveredlink => {
+    hoveredlink.addEventListener('mouseover', (e) => {
+        bigScreenNavbarLinks.forEach(link => {
+            if (e.target === link) {
+                link.style.color = 'white'
+                console.log('not')
+            } 
+            link.classList.add('not-hovered-navbar-link')
+        })
+    })
+    hoveredlink.addEventListener('mouseleave', (e) => {
+        bigScreenNavbarLinks.forEach(link => {
+            if (e.target === link) {
+                link.style.color = ''
+                console.log('not')
+            } 
+
+            link.classList.remove('not-hovered-navbar-link')
+        })
+    })
 })

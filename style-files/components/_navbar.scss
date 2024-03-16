@@ -1,4 +1,4 @@
-@import "../global-definitions";
+// @import "../global-definitions";
 
 .header-navbar {
   box-sizing: border-box;
@@ -76,10 +76,17 @@
     @include flexbox-control(0, 0, end);
     & li {
       padding-bottom: 20px;
+
+      & a {
+        transition: color 300ms ease-in-out;
+      }
     }
   }
 }
 
+.not-hovered-navbar-link {
+  color: gray;
+}
 @include mid-screen-meida {
   .navbar-links {
     width: 350px;

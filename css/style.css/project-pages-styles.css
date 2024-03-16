@@ -1,0 +1,87 @@
+:root {
+  --baseFontSize: 12px;
+}
+
+body {
+  color: white;
+}
+
+button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+h1,
+h2 {
+  font-family: "Akshar";
+  font-weight: 700;
+  letter-spacing: 7px;
+  font-size: calc(var(--baseFontSize) * 2.2);
+}
+
+.section-half {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 25px;
+}
+
+.divider-shape {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+  bottom: 0;
+  left: 0;
+}
+
+@media (min-width: 600px) {
+  :root {
+    --baseFontSize: 15px;
+  }
+  .section-half {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1000px) {
+  :root {
+    --baseFontSize: 18px;
+  }
+}
+
+.projects-page {
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  min-height: 100vh;
+  padding-block: 150px;
+  padding-inline: 30px;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0) 50% 400px, rgba(0, 0, 0, 0.7)), #1a1a1a;
+  isolation: isolate;
+}
+
+.projects-background-shape {
+  position: absolute;
+  right: 0;
+  top: 0px;
+  width: 600px;
+}

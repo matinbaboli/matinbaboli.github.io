@@ -1,10 +1,30 @@
 @import url("https://fonts.googleapis.com/css2?family=Akshar:wght@400..700&family=Bangers&family=Be+Vietnam+Pro:wght@400;500&family=Protest+Revolution&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100..900&display=swap");
 :root {
   --baseFontSize: 12px;
 }
 
+html {
+  scrollbar-color: black #1a1a1a;
+}
+
 body {
   color: white;
+}
+
+select {
+  font-family: "Akshar";
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: calc(var(--baseFontSize) * 0.8);
+  background: #1a1a1a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding-inline: 10px;
+  padding-block: 3px;
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
 }
 
 button {
@@ -54,6 +74,23 @@ h2 {
   left: 0;
 }
 
+.resume-download-btn {
+  padding: 5px 10px;
+  font-family: "Akshar";
+  font-weight: 400;
+  letter-spacing: 3px;
+  font-size: calc(var(--baseFontSize) * 0.7);
+  border: 1px solid #eb9500;
+  border-radius: 7px;
+  -webkit-transform: translateY(-500px);
+          transform: translateY(-500px);
+}
+
+.resume-download-btn img {
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+}
+
 @media (min-width: 600px) {
   :root {
     --baseFontSize: 15px;
@@ -83,8 +120,9 @@ h2 {
   z-index: 2;
   height: 80px;
   padding: 0 30px 10px 30px;
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.2);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -301,6 +339,7 @@ h2 {
 }
 
 .hero-section {
+  position: relative;
   width: 100%;
   min-height: 100vh;
   text-align: center;
@@ -317,11 +356,10 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background: linear-gradient(to top, black, rgba(0, 0, 0, 0) 250px), linear-gradient(140deg, #1f8cff 10%, #ffad1f 90% 200px), url("../../images/texture35yu2.jpg");
-  background-size: cover;
-  background-position: center;
-  background-blend-mode: soft-light;
   isolation: isolate;
+  background: linear-gradient(to top, black, rgba(0, 0, 0, 0) 250px);
+  background-color: #1a1a1a;
+  overflow: hidden;
 }
 
 .hero-section h1 {
@@ -335,6 +373,21 @@ h2 {
   font-weight: 300;
   letter-spacing: 4px;
   font-size: calc(var(--baseFontSize) * 1.3);
+}
+
+.hero-background-image-wraper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -3;
+  background: linear-gradient(to top, black, rgba(0, 0, 0, 0) 250px), linear-gradient(140deg, #1f8cff 10%, #ffad1f 90% 200px), url("../../images/texture35yu2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: soft-light;
+  -webkit-transition: opacity 100ms;
+  transition: opacity 100ms;
 }
 
 .hero-shapes-container {
@@ -404,12 +457,7 @@ h2 {
 .btn-primary {
   background: #eb9500;
   border-radius: 7px;
-  padding-inline: 27px;
-  padding-block: 7px;
-  font-family: "Akshar";
-  font-weight: 500;
-  letter-spacing: 3px;
-  font-size: calc(var(--baseFontSize) * 1.2);
+  color: white;
   cursor: pointer;
   -webkit-transition: -webkit-box-shadow 150ms linear;
   transition: -webkit-box-shadow 150ms linear;
@@ -422,6 +470,24 @@ h2 {
           box-shadow: 0px 0px 10px #eb9500, 0px 0px 35px #eb9500;
 }
 
+.btn-primary-small {
+  padding-inline: 15px;
+  padding-block: 7px;
+  font-family: "Akshar";
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: calc(var(--baseFontSize) * 1);
+}
+
+.btn-primary-big {
+  padding-inline: 27px;
+  padding-block: 7px;
+  font-family: "Akshar";
+  font-weight: 500;
+  letter-spacing: 3px;
+  font-size: calc(var(--baseFontSize) * 1.2);
+}
+
 .about-section {
   position: relative;
   -webkit-box-sizing: border-box;
@@ -431,6 +497,7 @@ h2 {
   padding-inline: 30px;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0) 50% 400px, rgba(0, 0, 0, 0.7)), #1a1a1a;
   isolation: isolate;
+  overflow: hidden;
 }
 
 .about-section-content {
@@ -450,7 +517,7 @@ h2 {
   gap: 50px;
 }
 
-.about-section-content img {
+.about-section-content .mask-lightning {
   position: absolute;
   top: 120px;
   left: -40px;
@@ -466,6 +533,15 @@ h2 {
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
   margin-top: 40px;
+}
+
+.about-text-container img {
+  width: 90%;
+  border-radius: 15px;
+  margin-block: 30px;
+  margin-left: 50px;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
 }
 
 @media (min-width: 600px) {
@@ -495,6 +571,7 @@ h2 {
 }
 
 .go-to-projects-link {
+  direction: ltr;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   position: relative;
@@ -601,7 +678,7 @@ h2 {
 .projects-section-content .projects-link-explanation {
   font-family: "Be Vietnam Pro";
   font-weight: 400;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   font-size: calc(var(--baseFontSize) * 1);
   width: 350px;
   height: 100px;
@@ -821,10 +898,25 @@ h2 {
 
 .social-links {
   list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 200px;
 }
 
 .social-links li {
-  display: block;
   padding-inline: 15px;
   padding-bottom: 15px;
 }
@@ -881,8 +973,8 @@ h2 {
             align-items: center;
     width: 500px;
   }
-  .social-links li {
-    display: inline;
+  .social-links {
+    width: 500px;
   }
   .social-links img {
     width: 30px;
@@ -907,6 +999,68 @@ h2 {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+  }
+  .social-links {
+    width: 700px;
+  }
+}
+
+#technologie-item {
+  font-family: "Akshar";
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-size: calc(var(--baseFontSize) * 0.8);
+  padding-inline: 9px;
+  padding-block: 3px;
+  background: #0072eb;
+  border-radius: 5px;
+}
+
+@-webkit-keyframes modal-open {
+  from {
+    display: block;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes modal-open {
+  from {
+    display: block;
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@-webkit-keyframes modal-close {
+  from {
+    display: block;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+
+@keyframes modal-close {
+  from {
+    display: block;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
   }
 }
 
@@ -1044,7 +1198,7 @@ h2 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 20px;
+  gap: 40px;
 }
 
 .contact-reminder-wraper p {
@@ -1054,6 +1208,122 @@ h2 {
   font-weight: 400;
   letter-spacing: 3px;
   font-size: calc(var(--baseFontSize) * 0.8);
+}
+
+.project-info-modal {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: fixed;
+  top: 0px;
+  bottom: 0;
+  left: 0px;
+  right: 0px;
+  width: 90%;
+  height: 600px;
+  padding: 60px;
+  background: #1a1a1a;
+  border: 1px solid #eb9500;
+  border-radius: 10px;
+  color: white;
+}
+
+.project-info-modal h3 {
+  font-family: "Be Vietnam Pro";
+  font-weight: 500;
+  letter-spacing: 3px;
+  font-size: calc(var(--baseFontSize) * 1.1);
+}
+
+.project-info-modal p {
+  font-family: "Be Vietnam Pro";
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-size: calc(var(--baseFontSize) * 1);
+}
+
+.project-info-modal button:focus {
+  outline: none;
+}
+
+.project-info-modal button {
+  float: right;
+}
+
+.project-modal-content-wraper {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  margin-top: 100px;
+  gap: 150px;
+}
+
+.project-modal-content-wraper .project-description {
+  line-height: 30px;
+}
+
+.project-modal-content-wraper img {
+  margin-top: 80px;
+  width: 100%;
+}
+
+.project-details {
+  text-align: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  float: right;
+  width: 100%;
+  margin-top: 40px;
+  margin-left: 40px;
+}
+
+.project-details a {
+  grid-column: 1 / -1;
+}
+
+.project-details h3 {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.project-details h3::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: white;
+}
+
+.technologies-wraper {
+  min-height: 100px;
+}
+
+.technologies-wraper div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 5px;
+}
+
+.client-wraper {
+  min-height: 100px;
 }
 
 @media (min-width: 600px) {
@@ -1080,6 +1350,16 @@ h2 {
     width: 300px;
     text-align: start;
   }
+  .project-details {
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .project-details a {
+    grid-column: auto;
+  }
 }
 
 @media (min-width: 1000px) {
@@ -1089,5 +1369,15 @@ h2 {
   }
   .contact-reminder-wraper p {
     width: 500px;
+  }
+  .project-description {
+    display: inline-block;
+    width: 70%;
+  }
+  .project-details {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    width: 200px;
+    margin-top: 0px;
   }
 }

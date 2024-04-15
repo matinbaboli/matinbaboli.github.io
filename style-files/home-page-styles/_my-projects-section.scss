@@ -8,7 +8,7 @@
     gap: 25px;
 
     .projects-link-explanation {
-      @include font-and-letterspacing-control($secondaryFont, 400, 3px);
+      @include font-and-letterspacing-control($secondaryFont, 400, 2px);
       width: 350px;
       height: 100px;
       line-height: 25px;

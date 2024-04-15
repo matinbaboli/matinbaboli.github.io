@@ -1,24 +1,64 @@
+import {en} from "./languages/eng.js"
+import {fa} from "./languages/fa.js"
+
 const openMenuButton = document.getElementById("open-menu-btn")
 const closeMenuButton = document.getElementById("close-menu-btn")
 const navbarLinks = document.getElementById('navbar-links-id')
+const closeModalBtn = document.getElementById('close-modal-btn')
+const languageSelector = document.getElementById('language-selector')
+
 const projectsLinkExplanation = document.querySelector('.projects-link-explanation')
+const ProjectDetailsModal = document.querySelector('.project-info-modal')
+const allTexts = document.querySelectorAll('#text')
+const bigScreenNavbarLinks = document.querySelectorAll('.navbar-links-big-screen .hover-effect')
+const projectCard = document.querySelectorAll('.project-card')
 const projectsPageLinkNodes = document.querySelectorAll('#projects-link')
 const projectsPageLinkArray = Array.from(projectsPageLinkNodes)
-const bigScreenNavbarLinks = document.querySelectorAll('.navbar-links-big-screen a')
-console.log(bigScreenNavbarLinks)
+
+// console.log(en)
+
+languageSelector.value = sessionStorage.localeValue || "en"
+let translationId
+allTexts.forEach(text => {
+    translationId = text.dataset.translationId
+    
+    if (languageSelector.value === "fa") {
+        text.innerHTML += fa[translationId]
+        document.body.style.direction = "rtl"
+        allTexts.forEach(text => {
+            text.style.letterSpacing = '1px'
+            text.style.fontFamily = 'Noto Sans Arabic'
+
+        })
+    } else {
+        text.innerHTML += en[translationId]
+        document.body.style.direction = "ltr"
+    }
+})
+
+languageSelector.addEventListener("change", (e) => { 
+sessionStorage.localeValue = e.target.value 
+location.reload()
+})
+
 
 
 projectsPageLinkArray.forEach((link) => {
-    let explanationText;
+    let dynamicTextId;
 
     if (link.parentElement.firstElementChild === link){
-        explanationText = 'Through this link you can see the work that i have done for other companies.'
+        dynamicTextId = "official_link_explanation"
     } else {
-        explanationText = 'Through this link you can see the projects that i have done in my spare time. Eather for practice or just for fun :).'
+        dynamicTextId = "personal_link_explanation"
     }
 
     link.addEventListener("mouseover", () => {
-        projectsLinkExplanation.textContent = explanationText
+        if (languageSelector.value === "fa") {
+        projectsLinkExplanation.textContent = fa[dynamicTextId]
+        } else {
+        projectsLinkExplanation.textContent = en[dynamicTextId]
+        }
+
         projectsLinkExplanation.style.visibility = 'visible'
     })
     link.addEventListener('mouseleave', () => {
@@ -52,8 +92,36 @@ bigScreenNavbarLinks.forEach(hoveredlink => {
                 link.style.color = ''
                 console.log('not')
             } 
-
+            
             link.classList.remove('not-hovered-navbar-link')
         })
     })
 })
+
+const checkpoint = 300
+let opacity
+window.addEventListener('scroll', () => {
+    const scrolledAmount = window.pageYOffset
+    if (scrolledAmount <= checkpoint) {
+        opacity = 1 - scrolledAmount / checkpoint
+    }
+    else {
+        opacity = 0
+    }
+        document.querySelector('.hero-background-image-wraper').style.opacity = opacity
+    document.querySelector('.hero-shapes-container').style.opacity = opacity
+})
+
+projectCard.forEach(card => {
+    card.addEventListener('click', () => {
+        ProjectDetailsModal.showModal()
+        ProjectDetailsModal.style.animation = 'modal-open 500ms'
+    })
+})
+closeModalBtn.addEventListener('click', () => {
+    ProjectDetailsModal.close()
+    ProjectDetailsModal.style.animation = 'modal-close 500ms'
+})
+
+
+

@@ -21,11 +21,12 @@
 
 .social-links {
   list-style: none;
+  @include flexbox-control(row, start, center);
+  flex-wrap: wrap;
+  width: 200px;
   & li {
-    display: block;
     padding-inline: 15px;
     padding-bottom: 15px;
-    // width: 50px;
   }
   & a {
     color: $secondary-color;
@@ -58,9 +59,7 @@
   }
 
   .social-links {
-    & li {
-      display: inline;
-    }
+    width: 500px;
     & img {
       width: 30px;
     }
@@ -72,5 +71,8 @@
   }
   .email-option-container {
     @include flexbox-control(row, space-between, center);
+  }
+  .social-links {
+    width: 700px;
   }
 }

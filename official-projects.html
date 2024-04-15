@@ -22,27 +22,39 @@
             <nav class="navbar-links-big-screen">
                 <ul>
                     <li>
-                        <a href="./index.html">
-                            Home
+                        <a id="text" data-translation-id="nav_home_link" class="hover-effect" href="./index.html">
+            
                         </a>
                     </li>
                     <li>
-                        <a href="./contact-me.html">
-                            Contact Me
+                        <a id="text" data-translation-id="nav_contact_me_link" class="hover-effect" href="./contact-me.html">
+            
                         </a>
                     </li>
                     <li>
-                        <a href="./personal-projects.html">
-                            Personal Projects
+                        <a id="text" data-translation-id="nav_personal_projects_link" class="hover-effect"
+                            href="./personal-projects.html">
+            
                         </a>
                     </li>
                     <li>
-                        <a href="./official-projects.html">
-                            Official Projects
+                        <a id="text" data-translation-id="nav_official_projects_link" class="hover-effect"
+                            href="./official-projects.html">
+            
+                        </a>
+                    </li>
+                    <li>
+                        <select name="language" id="language-selector">
+                            <option value="en">Eng</option>
+                            <option value="fa">Fa</option>
+                        </select>
+                    </li>
+                    <li>
+                        <a id="text" data-translation-id="resume_download_btn" class="resume-download-btn" href="#" download>
                         </a>
                     </li>
                 </ul>
-
+            
             </nav>
 
         </div>
@@ -53,27 +65,23 @@
             </button>
             <ul>
                 <li>
-                    <a href="./index.html">
+                    <a id="text" data-translation-id="nav_home_link" href="./index.html">
                         <img src="./icons/navbar-icons/home-icon.svg" alt="home-icon">
-                        Home
                     </a>
                 </li>
                 <li>
-                    <a href="./contact-me.html">
+                    <a id="text" data-translation-id="nav_contact_me_link" href="./contact-me.html">
                         <img src="./icons/navbar-icons/contact-icon.svg" alt="contact-me-icon">
-                        Contact Me
                     </a>
                 </li>
                 <li>
-                    <a href="./personal-projects.html">
+                    <a id="text" data-translation-id="nav_personal_projects_link" href="./personal-projects.html">
                         <img src="./icons/navbar-icons/personal-project-icon.svg" alt="personal-projects-icon">
-                        Personal Projects
                     </a>
                 </li>
                 <li>
-                    <a href="./official-projects.html">
+                    <a id="text" data-translation-id="nav_official_projects_link" href="./official-projects.html">
                         <img src="./icons/navbar-icons/official-projects-icon.svg" alt="official-projects-icon">
-                        Official Projects
                     </a>
                 </li>
             </ul>
@@ -82,15 +90,14 @@
 
     <main>
         <section class="projects-page">
-            <h1>
-                OFFICIAL PROJECTS
+            <h1 id="text" data-translation-id="official_projects_page_title">
             </h1>
             <article class="projects-page-content">
                 <div class="project-card">
                     <img src="./images/Official-projects-link.jpg" alt="project-preview">
                     <div>
                         <h2>Title</h2>
-                        <p>More Details
+                        <p id="text" data-translation-id="more_details">
                             <img src="./icons/arrow-right-icon.svg" alt="">
                         </p>
                     </div>
@@ -99,7 +106,7 @@
                     <img src="./images/Official-projects-link.jpg" alt="project-preview">
                     <div>
                         <h2>Title</h2>
-                        <p>More Details
+                        <p id="text" data-translation-id="more_details">
                             <img src="./icons/arrow-right-icon.svg" alt="">
                         </p>
                     </div>
@@ -108,7 +115,7 @@
                     <img src="./images/Official-projects-link.jpg" alt="project-preview">
                     <div>
                         <h2>Title</h2>
-                        <p>More Details
+                        <p id="text" data-translation-id="more_details">
                             <img src="./icons/arrow-right-icon.svg" alt="">
                         </p>
                     </div>
@@ -117,24 +124,56 @@
                     <img src="./images/Official-projects-link.jpg" alt="project-preview">
                     <div>
                         <h2>Title</h2>
-                        <p>More Details
+                        <p id="text" data-translation-id="more_details">
                             <img src="./icons/arrow-right-icon.svg" alt="">
                         </p>
                     </div>
                 </div>
-                <div class="project-card">
-                    <img src="./images/Official-projects-link.jpg" alt="project-preview">
-                    <div>
-                        <h2>Title</h2>
-                        <p>More Details
-                            <img src="./icons/arrow-right-icon.svg" alt="">
-                        </p>
-                    </div>
+                <div class="contact-reminder-wraper">
+                    <p id="text" data-translation-id="contact_me_notice"></p>
+                    <a id="text" data-translation-id="nav_contact_me_link" href="./contact-me.html"
+                        class="btn-primary btn-primary-big"></a>
                 </div>
             </article>
             <img class="projects-background-shape" src="./images/Component.png" alt="background-shapes">
             <img class="divider-shape" src="./icons/triangle-shape.svg" alt="shape">
         </section>
+
+        <dialog class="project-info-modal">
+            <button id="close-modal-btn">
+                <img src="./icons/navbar-icons/close-icon.svg" alt="">
+            </button>
+            <h2>PROJECT TITLE</h2>
+            <div class="project-modal-content-wraper">
+                <div>
+                    <p class="project-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Voluptatibus illum repellendus quaerat veritatis rem assumenda ipsam eos eius et pariatur
+                        ducimus commodi adipisci maxime, facere iste aperiam fuga, aut vero!</p>
+                    <aside class="project-details">
+                        <div class="technologies-wraper">
+                            <h3 id="text" data-translation-id="technologies"></h3>
+                            <div>
+                                <p id="technologie-item">html</p>
+                                <p id="technologie-item">React</p>
+                                <p id="technologie-item">React</p>
+                                <p id="technologie-item">React</p>
+                                <p id="technologie-item">css</p>
+                                <p id="technologie-item">css</p>
+
+                            </div>
+                        </div>
+                        <div class="client-wraper">
+                            <h3 id="text" data-translation-id="client">
+                            </h3>
+                            <p>Someone</p>
+                        </div>
+                        <a href="" id="text" data-translation-id="view_project"
+                            class="btn-primary btn-primary-small"></a>
+                    </aside>
+                    <img src="./images/ding.jpg" alt="">
+                </div>
+            </div>
+        </dialog>
     </main>
 
     <footer>
@@ -143,23 +182,19 @@
 
             <ul class="footer-navigation-links">
                 <li>
-                    <a href="./index.html">
-                        Home
+                    <a id="text" data-translation-id="nav_home_link" href="./index.html">
                     </a>
                 </li>
                 <li>
-                    <a href="./contact-me.html">
-                        Contact Me
+                    <a id="text" data-translation-id="nav_contact_me_link" href="./contact-me.html">
                     </a>
                 </li>
                 <li>
-                    <a href="./personal-projects.html">
-                        Personal Projects
+                    <a id="text" data-translation-id="nav_personal_projects_link" href="./personal-projects.html">
                     </a>
                 </li>
                 <li>
-                    <a href="./official-projects.html">
-                        Official Projects
+                    <a id="text" data-translation-id="nav_official_projects_link" href="./official-projects.html">
                     </a>
                 </li>
             </ul>
@@ -173,7 +208,7 @@
 
     </footer>
 
-    <script src="index.js"></script>
+    <script type="module" src="index.js"></script>
 
 </body>
 

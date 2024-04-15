@@ -20,27 +20,37 @@
             <nav class="navbar-links-big-screen">
                             <ul>
                                 <li>
-                                    <a href="./index.html">
-                                        Home
+                                    <a id="text" data-translation-id="nav_home_link" class="hover-effect" href="./index.html">
+                                        
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="./contact-me.html">
-                                        Contact Me
+                                    <a id="text" data-translation-id="nav_contact_me_link" class="hover-effect" href="./contact-me.html">
+                                    
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="./personal-projects.html">
-                                        Personal Projects
+                                    <a id="text" data-translation-id="nav_personal_projects_link" class="hover-effect" href="./personal-projects.html">
+                                        
                                     </a>
                                 </li>
                                 <li>
-                                    <a href="./official-projects.html">
-                                        Official Projects
+                                    <a id="text" data-translation-id="nav_official_projects_link" class="hover-effect" href="./official-projects.html">
+                                
+                                    </a>
+                                </li>
+                                <li>
+                                    <select name="language" id="language-selector">
+                                        <option value="en">Eng</option> 
+                                        <option value="fa">Fa</option> 
+                                    </select>
+                                </li>
+                                <li>
+                                    <a id="text" data-translation-id="resume_download_btn" class="resume-download-btn" href="#" download>
                                     </a>
                                 </li>
                             </ul>
-
+                            
             </nav>
             
         </div>
@@ -51,39 +61,35 @@
             </button>
             <ul>
                 <li>
-                    <a href="./index.html">
+                    <a id="text" data-translation-id="nav_home_link" href="./index.html">
                         <img src="./icons/navbar-icons/home-icon.svg" alt="home-icon">
-                        Home
                     </a>
                 </li>
                 <li>
-                    <a href="./contact-me.html">
+                    <a id="text" data-translation-id="nav_contact_me_link" href="./contact-me.html">
                         <img src="./icons/navbar-icons/contact-icon.svg" alt="contact-me-icon">
-                        Contact Me
                     </a>
                 </li>
                 <li>
-                    <a href="./personal-projects.html">
+                    <a id="text" data-translation-id="nav_personal_projects_link" href="./personal-projects.html">
                         <img src="./icons/navbar-icons/personal-project-icon.svg" alt="personal-projects-icon">
-                        Personal Projects
                     </a>
                 </li>
                 <li>
-                    <a href="./official-projects.html">
+                    <a id="text" data-translation-id="nav_official_projects_link" href="./official-projects.html">
                         <img src="./icons/navbar-icons/official-projects-icon.svg" alt="official-projects-icon">
-                        Official Projects
                     </a>
                 </li>
             </ul>
         </nav>
     </header>
     <main>
-
         <section class="hero-section">
             <article>
                 <h1>MATIN BABOLI</h1>
                 <p>FRONT-END WEB DEVELOPER</p>
             </article>
+            <div class="hero-background-image-wraper"></div>
             <div class="hero-shapes-container">
                 <img  src="./images/images 1.png" alt="shape">
                 <img  src="./images/images (1) 1.png" alt="shape">
@@ -93,13 +99,17 @@
         </section>
         <section class="about-section">
             <article class="about-section-content">
-                <img src="./images/lightning-mask.png" alt="">
+                <img class="mask-lightning" src="./images/lightning-mask.png" alt="">
                 <div class="about-text-container">
-                    <h2>ABOUT ME</h2>
-                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. At hic officiis, alias molestiae, natus porro deleniti autem adipisci dolor eius maiores ea dignissimos rerum, laboriosam nihil praesentium. Reiciendis cupiditate, quas, odio, ut voluptates excepturi aliquam tenetur officia explicabo est unde.</p>
+                    <h2 id="text" data-translation-id="about_me_title"></h2>
+
+                    <p id="text" data-translation-id="about_me_first_p"></p>
+                    <img src="./images/my-picture.jpg" alt="matin's picture">
+                    <p id="text" data-translation-id="about_me_second_p"></p>
+                    <p id="text" data-translation-id="about_me_third_p"></p>
                 </div>
                 <div>
-                    <a href="./contact-me.html" class="btn-primary">Contact Me</a>
+                    <a id="text" data-translation-id="nav_contact_me_link" href="./contact-me.html" class="btn-primary btn-primary-big"></a>
                 </div>
             </article>
         </section>
@@ -107,31 +117,26 @@
             <article class="projects-section-content">
                 <div class="section-half">
                     <img src="./icons/my-projects-icon 1.svg" alt="">
-                    <h2>MY PROJECTS</h2>
-                    <p class="projects-link-explanation">
-                        through this link you can see the work i have done for other companies.
+                    <h2 id="text" data-translation-id="my_projects_title"></h2>
+                    <p id="text" class="projects-link-explanation">
                     </p>
                 </div>
                 <div class="section-half">
                     <a id="projects-link" href="./official-projects.html">
                         <div class="go-to-projects-link">
                             <div class="overlay overlay-primary-color"></div>
-                            <h3>
-                                OFFICIAL
+                            <h3 id="text" data-translation-id="official_projects_cool_link_title">
                             </h3>
-                            <p>
-                                view projects
+                            <p id="text" data-translation-id="view_projects_text">
                             </p>
                         </div>
                     </a>
                     <a id="projects-link" href="./personal-projects.html">
                         <div class="go-to-projects-link">
                             <div class="overlay overlay-secondary-color"></div>
-                            <h3>
-                                PERSONAL
+                            <h3 id="text" data-translation-id="personal_projects_cool_link_title">
                             </h3>
-                            <p>
-                                view projects
+                            <p id="text" data-translation-id="view_projects_text">
                             </p>        
                         </div>
                     </a>
@@ -142,39 +147,63 @@
             <article class="skills-section-content">
                 <div class="section-half">
                     <img class="my-skills-icon" src="./icons/my-skills-icon.svg" alt="my-skills-icon">
-                    <h2>MY SKILLS</h2>
+                    <h2 id="text" data-translation-id="my_skills_title"></h2>
                 </div>
                 <div class="section-half">
                     <div class="skill-item-container">
                         <div class="skill-item">
                             <div class="skill-item-icon-area">
-                                <img src="./icons/Skill Icons/css-skill-icon.svg" alt="css-icon">
+                                <img src="./icons/Skill Icons/html.svg" alt="css-icon">
                             </div>
-                            <p>Skill 1</p>
+                            <p>HTML</p>
                         </div>
                         <div class="skill-item">
                             <div class="skill-item-icon-area">
-                                <img src="./icons/Skill Icons/css-skill-icon.svg" alt="css-icon">
+                                <img src="./icons/Skill Icons/css.svg" alt="css-icon">
                             </div>
-                            <p>Skill 1</p>
+                            <p>CSS</p>
                         </div>
                         <div class="skill-item">
                             <div class="skill-item-icon-area">
-                                <img src="./icons/Skill Icons/css-skill-icon.svg" alt="css-icon">
+                                <img src="./icons/Skill Icons/javascript.svg" alt="css-icon">
                             </div>
-                            <p>Skill 1</p>
+                            <p>JavaScript</p>
                         </div>
                         <div class="skill-item">
                             <div class="skill-item-icon-area">
-                                <img src="./icons/Skill Icons/css-skill-icon.svg" alt="css-icon">
+                                <img src="./icons/Skill Icons/React.svg" alt="css-icon">
                             </div>
-                            <p>Skill 1</p>
+                            <p>React</p>
                         </div>
                         <div class="skill-item">
                             <div class="skill-item-icon-area">
-                                <img src="./icons/Skill Icons/css-skill-icon.svg" alt="css-icon">
+                                <img src="./icons/Skill Icons/sass.svg" alt="css-icon">
                             </div>
-                            <p>Skill 1</p>
+                            <p>Sass</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-item-icon-area">
+                                <img src="./icons/Skill Icons/tailwind.svg" alt="css-icon">
+                            </div>
+                            <p>Tailwind</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-item-icon-area">
+                                <img src="./icons/Skill Icons/git.svg" alt="css-icon">
+                            </div>
+                            <p>Git</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-item-icon-area">
+                                <img src="./icons/Skill Icons/cypress.svg" alt="css-icon">
+                            </div>
+                            <p>Cypress</p>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-item-icon-area">
+                                <img src="./icons/Skill Icons/figma.svg" alt="css-icon">
+                            </div>
+                            <p>Figma</p>
                         </div>
                     </div>
                 </div>
@@ -191,23 +220,19 @@
         
             <ul class="footer-navigation-links">
                 <li>
-                    <a href="./index.html">
-                        Home
+                    <a id="text" data-translation-id="nav_home_link" href="./index.html">
                     </a>
                 </li>
                 <li>
-                    <a href="./contact-me.html">
-                        Contact Me
+                    <a id="text" data-translation-id="nav_contact_me_link" href="./contact-me.html">
                     </a>
                 </li>
                 <li>
-                    <a href="./personal-projects.html">
-                        Personal Projects
+                    <a id="text" data-translation-id="nav_personal_projects_link" href="./personal-projects.html">
                     </a>
                 </li>
                 <li>
-                    <a href="./official-projects.html">
-                        Official Projects
+                    <a id="text" data-translation-id="nav_official_projects_link" href="./official-projects.html">
                     </a>
                 </li>
             </ul>
@@ -221,18 +246,20 @@
 
     </footer>
 
-    <script src="index.js"></script>
+    <script type="module" src="index.js"></script>
                 
 </body>
 </html>
 
-<!-- finnish projects page DONE
 
-add resume download button
+<!-- 
+    write a good resume and attach it to the download btn
 
-add change language button
+    add a good picture to the about me section
 
-write a good about me text
+    find a automatic test for seo and accesibility of your code and use them
 
-check the entire project to see if you missed anything
+    and lastly find a good way to host your portfolio
 -->
+
+

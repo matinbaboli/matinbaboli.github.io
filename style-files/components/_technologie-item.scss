@@ -1,0 +1,8 @@
+#technologie-item {
+  //   flex: 1;
+  @include font-and-letterspacing-control($mainFont, 400, 2px, 0.8);
+  padding-inline: 9px;
+  padding-block: 3px;
+  background: $primary-color;
+  border-radius: 5px;
+}

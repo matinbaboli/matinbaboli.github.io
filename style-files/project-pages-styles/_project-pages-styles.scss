@@ -1,3 +1,24 @@
+@import "../components/technologie-item";
+
+@keyframes modal-open {
+  from {
+    display: block;
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes modal-close {
+  from {
+    display: block;
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+
 .projects-page {
   @include general-section-control();
   overflow: hidden;
@@ -90,12 +111,106 @@
   padding: 20px;
   border: 1px solid $secondary-color;
   @include flexbox-control(column);
-  gap: 20px;
+  gap: 40px;
   & p {
     line-height: 25px;
     text-align: center;
     @include font-and-letterspacing-control($secondaryFont, 400, 3px, 0.8);
   }
+}
+
+.project-info-modal {
+  box-sizing: border-box;
+  position: fixed;
+  top: 0px;
+  bottom: 0;
+  left: 0px;
+  right: 0px;
+  width: 90%;
+  height: 600px;
+  padding: 60px;
+  background: $background-color;
+  border: 1px solid $secondary-color;
+  border-radius: 10px;
+  color: white;
+
+  & h3 {
+    @include font-and-letterspacing-control($secondaryFont, 500, 3px, 1.1);
+  }
+
+  & p {
+    @include font-and-letterspacing-control($secondaryFont, 400, 2px);
+  }
+  button {
+    &:focus {
+      outline: none;
+    }
+  }
+
+  button {
+    float: right;
+  }
+}
+.project-modal-content-wraper {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  // @include flexbox-control();
+  margin-top: 100px;
+  gap: 150px;
+
+  .project-description {
+    line-height: 30px;
+  }
+
+  & img {
+    margin-top: 80px;
+    width: 100%;
+  }
+}
+.project-details {
+  text-align: center;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  float: right;
+  width: 100%;
+  margin-top: 40px;
+  margin-left: 40px;
+
+  & a {
+    grid-column: 1 / -1;
+  }
+
+  & h3 {
+    position: relative;
+    margin-bottom: 20px;
+    // width: 200px;
+  }
+
+  & h3::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: white;
+  }
+}
+.technologies-wraper {
+  min-height: 100px;
+  & div {
+    @include flexbox-control(row, start);
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+}
+
+.client-wraper {
+  // margin-top: 30px;
+  // margin-bottom: 100px;
+  min-height: 100px;
 }
 
 @include mid-screen-meida {
@@ -109,6 +224,14 @@
       text-align: start;
     }
   }
+  .project-details {
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+
+    & a {
+      grid-column: auto;
+    }
+  }
 }
 @include big-screen-meida {
   .projects-page-content {
@@ -118,5 +241,15 @@
     & p {
       width: 500px;
     }
+  }
+  .project-description {
+    display: inline-block;
+    width: 70%;
+  }
+  .project-details {
+    grid-template-columns: repeat(1, 1fr);
+    // justify-items: center;
+    width: 200px;
+    margin-top: 0px;
   }
 }

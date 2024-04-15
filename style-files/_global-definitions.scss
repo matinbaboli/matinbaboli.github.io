@@ -7,6 +7,7 @@ $background-color: #1a1a1a;
 
 $mainFont: "Akshar";
 $secondaryFont: "Be Vietnam Pro";
+$farsiFont: "Noto Sans Arabic";
 
 $generalBlockPadding: 150px;
 $generalInlinePadding: 30px;
@@ -67,8 +68,23 @@ $generalInlinePadding: 30px;
   }
 }
 
+html {
+  scrollbar-color: black $background-color;
+}
+
 body {
   color: white;
+}
+
+select {
+  @include font-and-letterspacing-control($mainFont, 400, 1px, 0.8);
+  background: $background-color;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding-inline: 10px;
+  padding-block: 3px;
+  transform: translateY(5px);
 }
 
 button {
@@ -84,8 +100,10 @@ a {
 
 h1,
 h2 {
+  // @include font-and-letterspacing-control($farsiFont, 700, 2px, 2.2);
   @include font-and-letterspacing-control($mainFont, 700, 7px, 2.2);
 }
+
 .section-half {
   width: 100%;
   @include flexbox-control(column);
@@ -100,6 +118,17 @@ h2 {
   // transform: scale(-1, -1);
   bottom: 0;
   left: 0;
+}
+
+.resume-download-btn {
+  padding: 5px 10px;
+  @include font-and-letterspacing-control($mainFont, 400, 3px, 0.7);
+  border: 1px solid $secondary-color;
+  border-radius: 7px;
+  transform: translateY(-500px);
+  & img {
+    transform: translateY(4px);
+  }
 }
 
 @include mid-screen-meida {

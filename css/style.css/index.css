@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Akshar:wght@400..700&family=Bangers&family=Be+Vietnam+Pro:wght@400;500&family=Protest+Revolution&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@100..900&display=swap");
 :root {
-  --baseFontSize: 12px;
+  --baseFontSize: 14px;
 }
 
 html {
@@ -91,9 +91,9 @@ h2 {
           transform: translateY(4px);
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   :root {
-    --baseFontSize: 15px;
+    --baseFontSize: 16px;
   }
   .section-half {
     width: 50%;
@@ -233,7 +233,7 @@ h2 {
   color: gray;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .navbar-links {
     width: 350px;
   }
@@ -298,7 +298,7 @@ h2 {
   margin-bottom: 20px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .footer-navigation {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -429,7 +429,7 @@ h2 {
           filter: drop-shadow(3px -4px 5px #eb9500);
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .hero-section h1 {
     font-size: calc(var(--baseFontSize) * 4);
     letter-spacing: 15px;
@@ -539,12 +539,12 @@ h2 {
   width: 90%;
   border-radius: 15px;
   margin-block: 30px;
-  margin-left: 50px;
+  margin-inline: auto;
   -webkit-filter: grayscale(1);
           filter: grayscale(1);
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .about-section-content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -567,6 +567,9 @@ h2 {
   }
   .about-text-container {
     width: 55%;
+  }
+  .about-text-container img {
+    margin-left: 50px;
   }
 }
 
@@ -699,7 +702,7 @@ h2 {
   height: auto;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .projects-section-content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -819,7 +822,7 @@ h2 {
   opacity: 50%;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .skills-section-content {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -937,7 +940,7 @@ h2 {
           transform: translateY(5px);
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .contact-me-page h1 {
     text-align: start;
   }
@@ -1326,7 +1329,7 @@ h2 {
   min-height: 100px;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 700px) {
   .projects-page-content {
     -ms-grid-columns: (minmax(1px, 350px))[2];
         grid-template-columns: repeat(2, minmax(1px, 350px));

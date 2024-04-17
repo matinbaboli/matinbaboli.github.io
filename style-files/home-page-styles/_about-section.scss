@@ -29,7 +29,7 @@
     width: 90%;
     border-radius: 15px;
     margin-block: 30px;
-    margin-left: 50px;
+    margin-inline: auto;
     filter: grayscale(1);
   }
 }
@@ -47,5 +47,8 @@
   }
   .about-text-container {
     width: 55%;
+    & img {
+      margin-left: 50px;
+    }
   }
 }

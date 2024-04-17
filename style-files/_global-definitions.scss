@@ -14,7 +14,7 @@ $generalInlinePadding: 30px;
 
 :root {
   // here, a normal css variable was used because of it's ability to be updated with media queries
-  --baseFontSize: 12px;
+  --baseFontSize: 14px;
 }
 @mixin font-and-letterspacing-control(
   $fontFamily,
@@ -58,7 +58,7 @@ $generalInlinePadding: 30px;
 }
 
 @mixin mid-screen-meida {
-  @media (min-width: 600px) {
+  @media (min-width: 700px) {
     @content;
   }
 }
@@ -133,7 +133,7 @@ h2 {
 
 @include mid-screen-meida {
   :root {
-    --baseFontSize: 15px;
+    --baseFontSize: 16px;
   }
   .section-half {
     width: 50%;

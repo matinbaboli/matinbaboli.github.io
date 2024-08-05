@@ -5,7 +5,8 @@ const openMenuButton = document.getElementById("open-menu-btn")
 const closeMenuButton = document.getElementById("close-menu-btn")
 const navbarLinks = document.getElementById('navbar-links-id')
 const closeModalBtn = document.getElementById('close-modal-btn')
-const languageSelector = document.getElementById('language-selector')
+const languageSelectorBigScreen = document.getElementById('language-selector-big-screen')
+const languageSelectorSmallScreen = document.getElementById('language-selector-small-screen')
 
 const projectsLinkExplanation = document.querySelector('.projects-link-explanation')
 const ProjectDetailsModal = document.querySelector('.project-info-modal')
@@ -17,12 +18,13 @@ const projectsPageLinkArray = Array.from(projectsPageLinkNodes)
 
 // console.log(en)
 
-languageSelector.value = sessionStorage.localeValue || "en"
+languageSelectorBigScreen.value = sessionStorage.localeValue || "en"
+languageSelectorSmallScreen.value = sessionStorage.localeValue || "en"
 let translationId
 allTexts.forEach(text => {
     translationId = text.dataset.translationId
     
-    if (languageSelector.value === "fa") {
+    if (sessionStorage.localeValue === "fa") {
         text.innerHTML += fa[translationId]
         document.body.style.direction = "rtl"
         allTexts.forEach(text => {
@@ -36,7 +38,11 @@ allTexts.forEach(text => {
     }
 })
 
-languageSelector.addEventListener("change", (e) => { 
+languageSelectorBigScreen.addEventListener("change", (e) => { 
+sessionStorage.localeValue = e.target.value 
+location.reload()
+})
+languageSelectorSmallScreen.addEventListener("change", (e) => { 
 sessionStorage.localeValue = e.target.value 
 location.reload()
 })

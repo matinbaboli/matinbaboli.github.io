@@ -3,6 +3,7 @@
 .header-navbar {
   box-sizing: border-box;
   width: 100%;
+  direction: ltr;
 
   & div {
     position: fixed;
@@ -90,12 +91,17 @@
 }
 @include mid-screen-meida {
   .navbar-links {
+    display: block;
     width: 350px;
   }
   .header-navbar_logo img {
     width: 135px;
   }
 }
+
+// i added the change language feature to the mobile screen code but it doesn't work, the reason might be because of the big screen navbar wich still exists in the code and js selects the language changer from there because it comes first.
+
+// also before you even think about running the sass compiler, first configure the settings so it doesn't messup your files
 
 @include big-screen-meida {
   .header-navbar {

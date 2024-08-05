@@ -783,12 +783,12 @@ h2 {
   line-height: 50px;
 }
 .projects-page-content {
-  display: grid;
-  grid-template-columns: repeat(1, minmax(1px, 350px));
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   gap: 40px;
   margin-top: 80px;
-  margin-inline: auto;
 }
 
 .projects-background-shape {
@@ -800,8 +800,17 @@ h2 {
   opacity: 70%;
 }
 
+.project-cards-wraper {
+  display: grid;
+  gap: 20px;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(1, minmax(1px, 350px));
+}
+
 .project-card {
   position: relative;
+  display: inline-block;
   overflow: visible;
   background: #0d0d0d;
   border-top: 1px solid #0072eb;
@@ -814,7 +823,7 @@ h2 {
   float: left;
   font-family: "Akshar";
   font-weight: 500;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
   font-size: calc(var(--baseFontSize) * 1.5);
   margin: 13px;
   text-align: start;
@@ -822,7 +831,6 @@ h2 {
 .project-card p {
   float: right;
   margin: 12px 20px;
-  text-align: end;
   color: #eb9500;
   opacity: 0;
   transition: opacity 150ms ease-in-out;
@@ -844,7 +852,7 @@ h2 {
   content: "";
   position: absolute;
   top: 0;
-  bottom: 0px;
+  bottom: 0;
   left: 0;
   right: 0;
   border-radius: 10px;
@@ -974,7 +982,7 @@ h2 {
 }
 
 @media (min-width: 700px) {
-  .projects-page-content {
+  .project-cards-wraper {
     grid-template-columns: repeat(2, minmax(1px, 350px));
   }
   .contact-reminder-wraper {
@@ -996,7 +1004,7 @@ h2 {
   }
 }
 @media (min-width: 1000px) {
-  .projects-page-content {
+  .project-cards-wraper {
     grid-template-columns: repeat(3, minmax(1px, 350px));
   }
   .contact-reminder-wraper p {

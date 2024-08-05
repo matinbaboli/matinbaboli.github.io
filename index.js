@@ -4,27 +4,22 @@ import {fa} from "./languages/fa.js"
 const openMenuButton = document.getElementById("open-menu-btn")
 const closeMenuButton = document.getElementById("close-menu-btn")
 const navbarLinks = document.getElementById('navbar-links-id')
-const closeModalBtn = document.getElementById('close-modal-btn')
 const languageSelectorBigScreen = document.getElementById('language-selector-big-screen')
 const languageSelectorSmallScreen = document.getElementById('language-selector-small-screen')
 
 const projectsLinkExplanation = document.querySelector('.projects-link-explanation')
-const ProjectDetailsModal = document.querySelector('.project-info-modal')
 const allTexts = document.querySelectorAll('#text')
 const bigScreenNavbarLinks = document.querySelectorAll('.navbar-links-big-screen .hover-effect')
-const projectCard = document.querySelectorAll('.project-card')
 const projectsPageLinkNodes = document.querySelectorAll('#projects-link')
 const projectsPageLinkArray = Array.from(projectsPageLinkNodes)
 
-// console.log(en)
-
-languageSelectorBigScreen.value = sessionStorage.localeValue || "en"
-languageSelectorSmallScreen.value = sessionStorage.localeValue || "en"
+languageSelectorBigScreen.value = sessionStorage.language || "en"
+languageSelectorSmallScreen.value = sessionStorage.language || "en"
 let translationId
 allTexts.forEach(text => {
     translationId = text.dataset.translationId
     
-    if (sessionStorage.localeValue === "fa") {
+    if (sessionStorage.language === "fa") {
         text.innerHTML += fa[translationId]
         document.body.style.direction = "rtl"
         allTexts.forEach(text => {
@@ -39,11 +34,11 @@ allTexts.forEach(text => {
 })
 
 languageSelectorBigScreen.addEventListener("change", (e) => { 
-sessionStorage.localeValue = e.target.value 
+sessionStorage.language = e.target.value 
 location.reload()
 })
 languageSelectorSmallScreen.addEventListener("change", (e) => { 
-sessionStorage.localeValue = e.target.value 
+sessionStorage.language = e.target.value 
 location.reload()
 })
 
@@ -87,7 +82,6 @@ bigScreenNavbarLinks.forEach(hoveredlink => {
         bigScreenNavbarLinks.forEach(link => {
             if (e.target === link) {
                 link.style.color = 'white'
-                console.log('not')
             } 
             link.classList.add('not-hovered-navbar-link')
         })
@@ -96,7 +90,6 @@ bigScreenNavbarLinks.forEach(hoveredlink => {
         bigScreenNavbarLinks.forEach(link => {
             if (e.target === link) {
                 link.style.color = ''
-                console.log('not')
             } 
             
             link.classList.remove('not-hovered-navbar-link')
@@ -118,16 +111,9 @@ window.addEventListener('scroll', () => {
     document.querySelector('.hero-shapes-container').style.opacity = opacity
 })
 
-projectCard.forEach(card => {
-    card.addEventListener('click', () => {
-        ProjectDetailsModal.showModal()
-        ProjectDetailsModal.style.animation = 'modal-open 500ms'
-    })
-})
-closeModalBtn.addEventListener('click', () => {
-    ProjectDetailsModal.close()
-    ProjectDetailsModal.style.animation = 'modal-close 500ms'
-})
+
+
+
 
 
 

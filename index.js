@@ -13,53 +13,57 @@ const bigScreenNavbarLinks = document.querySelectorAll('.navbar-links-big-screen
 const projectsPageLinkNodes = document.querySelectorAll('#projects-link')
 const projectsPageLinkArray = Array.from(projectsPageLinkNodes)
 
+if(!sessionStorage.language) {
+    sessionStorage.language = "en"
+}
+
 languageSelectorBigScreen.value = sessionStorage.language || "en"
 languageSelectorSmallScreen.value = sessionStorage.language || "en"
 let translationId
-allTexts.forEach(text => {
-    translationId = text.dataset.translationId
-    
-    if (sessionStorage.language === "fa") {
-        text.innerHTML += fa[translationId]
-        document.body.style.direction = "rtl"
-        allTexts.forEach(text => {
-            text.style.letterSpacing = '1px'
-            text.style.fontFamily = 'Noto Sans Arabic'
-
-        })
-    } else {
+    allTexts.forEach(text => {
+        translationId = text.dataset.translationId
+        
+        if (sessionStorage.language === "fa") {
+            text.innerHTML += fa[translationId]
+            document.body.style.direction = "rtl"
+            allTexts.forEach(text => {
+                text.style.letterSpacing = '1px'
+                text.style.fontFamily = 'Noto Sans Arabic'
+                
+            })
+        } else {
         text.innerHTML += en[translationId]
         document.body.style.direction = "ltr"
     }
 })
 
 languageSelectorBigScreen.addEventListener("change", (e) => { 
-sessionStorage.language = e.target.value 
-location.reload()
+    sessionStorage.language = e.target.value 
+    location.reload()
 })
 languageSelectorSmallScreen.addEventListener("change", (e) => { 
-sessionStorage.language = e.target.value 
-location.reload()
+    sessionStorage.language = e.target.value 
+    location.reload()
 })
 
 
 
 projectsPageLinkArray.forEach((link) => {
     let dynamicTextId;
-
+    
     if (link.parentElement.firstElementChild === link){
         dynamicTextId = "official_link_explanation"
     } else {
         dynamicTextId = "personal_link_explanation"
     }
-
+    
     link.addEventListener("mouseover", () => {
         if (languageSelector.value === "fa") {
-        projectsLinkExplanation.textContent = fa[dynamicTextId]
+            projectsLinkExplanation.textContent = fa[dynamicTextId]
         } else {
-        projectsLinkExplanation.textContent = en[dynamicTextId]
+            projectsLinkExplanation.textContent = en[dynamicTextId]
         }
-
+        
         projectsLinkExplanation.style.visibility = 'visible'
     })
     link.addEventListener('mouseleave', () => {
@@ -107,7 +111,7 @@ window.addEventListener('scroll', () => {
     else {
         opacity = 0
     }
-        document.querySelector('.hero-background-image-wraper').style.opacity = opacity
+    document.querySelector('.hero-background-image-wraper').style.opacity = opacity
     document.querySelector('.hero-shapes-container').style.opacity = opacity
 })
 

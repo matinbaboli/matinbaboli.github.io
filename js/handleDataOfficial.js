@@ -8,7 +8,7 @@ const ProjectDetailsModal = document.querySelector('.project-info-modal')
 
 
 async function start() {
-    const response = await fetch("../data/personal-projects.json")
+    const response = await fetch("../data/official-projects.json")
     const personalProjects = await response.json()
     createProjectCards(personalProjects)
     openAndCloseDetails(personalProjects)
@@ -33,9 +33,9 @@ function createProjectCards(personalProjects) {
         `
     
     }).join("")
+
     addDynamicText()
 
-    
 }
 
 function openAndCloseDetails(personalProjects) {
@@ -69,7 +69,7 @@ function handleModalDataForEachCard(projectId, personalProjects) {
                 <img src="./icons/navbar-icons/close-icon.svg" alt="close-modal">
             </button>
             <div class="project-modal-content-wraper">
-            <h2 id="dynamic-text" data-translation-id="blank">${title}</h2>
+                <h2 id="dynamic-text" data-translation-id="blank">${title}</h2>
                 <div id="project-details-wraper">
                     <p id="dynamic-text" data-translation-id="blank" class="project-description">${description}</p>
                     <aside class="project-details">
@@ -80,6 +80,11 @@ function handleModalDataForEachCard(projectId, personalProjects) {
                                     return `<p id="technologie-item">${item}</p>` 
                                 }).join("")}
                             </div>
+                        </div>
+                        <div class="client-wraper">
+                            <h3 id="dynamic-text" data-translation-id="client">
+                            </h3>
+                            <p>Someone</p>
                         </div>
                         <a href="${projectLink}" target="_blank" id="dynamic-text" data-translation-id="view_project"
                             class="btn-primary btn-primary-small"></a>

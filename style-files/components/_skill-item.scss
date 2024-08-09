@@ -10,6 +10,7 @@
 .skill-item {
   @include font-and-letterspacing-control($mainFont, 400, 3px, 1.1);
   text-align: center;
+  @include flexbox-control(column);
 
   &-icon-area {
     width: clamp(60px, 20vw, 74px);

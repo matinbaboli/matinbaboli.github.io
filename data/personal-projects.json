@@ -1,11 +1,11 @@
 [
     {
         "id": 1,
-        "thumbnailImage": "./images/project images/guitar world/main.png",
+        "thumbnailImage": "./images/project images/guitar world/main.jpg",
         "showcaseImages": [
-            "./images/project images/guitar world/preview1.png",
-            "./images/project images/guitar world/preview2.png",
-            "./images/project images/guitar world/preview3.png"
+            "./images/project images/guitar world/preview1.jpg",
+            "./images/project images/guitar world/preview2.jpg",
+            "./images/project images/guitar world/preview3.jpg"
         ],
         "englishTitle": "Guitar World",
         "englishDescription": "This is an online shop for buying different kinds of guitars which contains a homepage, about us, catalog(with filtering feature) and more...",

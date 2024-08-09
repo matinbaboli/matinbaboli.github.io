@@ -373,20 +373,20 @@ h2 {
 
 .btn-primary-small {
   padding-inline: 15px;
-  padding-block: 7px;
+  padding-block: 10px;
   font-family: "Akshar";
   font-weight: 500;
   letter-spacing: 2px;
-  font-size: calc(var(--baseFontSize) * 1);
+  font-size: calc(var(--baseFontSize) * 0.9);
 }
 
 .btn-primary-big {
-  padding-inline: 27px;
-  padding-block: 7px;
+  padding-inline: 22px;
+  padding-block: 13px;
   font-family: "Akshar";
   font-weight: 500;
   letter-spacing: 3px;
-  font-size: calc(var(--baseFontSize) * 1.2);
+  font-size: calc(var(--baseFontSize) * 1.1);
 }
 
 .about-section {
@@ -577,6 +577,10 @@ h2 {
   letter-spacing: 3px;
   font-size: calc(var(--baseFontSize) * 1.1);
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .skill-item-icon-area {
   width: clamp(60px, 20vw, 74px);
@@ -824,7 +828,7 @@ h2 {
   font-family: "Akshar";
   font-weight: 500;
   letter-spacing: 1px;
-  font-size: calc(var(--baseFontSize) * 1.5);
+  font-size: calc(var(--baseFontSize) * 1.2);
   margin: 13px;
   text-align: start;
 }
@@ -898,11 +902,15 @@ h2 {
   right: 0px;
   width: 90%;
   height: 600px;
-  padding: 60px;
+  padding-inline: 20px;
+  padding-block: 60px;
   background: #1a1a1a;
   border: 1px solid #eb9500;
   border-radius: 10px;
   color: white;
+}
+.project-info-modal h2 {
+  margin-bottom: 70px;
 }
 .project-info-modal h3 {
   font-family: "Be Vietnam Pro";
@@ -934,7 +942,7 @@ h2 {
   line-height: 30px;
 }
 .project-modal-content-wraper img {
-  margin-top: 80px;
+  margin-top: 60px;
   width: 100%;
 }
 
@@ -954,6 +962,7 @@ h2 {
 .project-details h3 {
   position: relative;
   margin-bottom: 20px;
+  padding-bottom: 5px;
 }
 .project-details h3::after {
   content: "";
@@ -1001,6 +1010,9 @@ h2 {
   }
   .project-details a {
     grid-column: auto;
+  }
+  .project-info-modal {
+    padding: 60px;
   }
 }
 @media (min-width: 1000px) {

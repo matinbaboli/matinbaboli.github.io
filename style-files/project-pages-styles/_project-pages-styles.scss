@@ -68,7 +68,7 @@
 
   & h2 {
     float: left;
-    @include font-and-letterspacing-control($mainFont, 500, 1px, 1.5);
+    @include font-and-letterspacing-control($mainFont, 500, 1px, 1.2);
     margin: 13px;
     text-align: start;
   }
@@ -140,11 +140,16 @@
   right: 0px;
   width: 90%;
   height: 600px;
-  padding: 60px;
+  padding-inline: 20px;
+  padding-block: 60px;
   background: $background-color;
   border: 1px solid $secondary-color;
   border-radius: 10px;
   color: white;
+
+  & h2 {
+    margin-bottom: 70px;
+  }
 
   & h3 {
     @include font-and-letterspacing-control($secondaryFont, 500, 3px, 1.1);
@@ -176,7 +181,7 @@
   }
 
   & img {
-    margin-top: 80px;
+    margin-top: 60px;
     width: 100%;
   }
 }
@@ -197,6 +202,7 @@
   & h3 {
     position: relative;
     margin-bottom: 20px;
+    padding-bottom: 5px;
     // width: 200px;
   }
 
@@ -243,6 +249,10 @@
     & a {
       grid-column: auto;
     }
+  }
+
+  .project-info-modal {
+    padding: 60px;
   }
 }
 @include big-screen-meida {

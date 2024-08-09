@@ -1,4 +1,5 @@
 export const fa = {
+    blank: "",
     nav_home_link: "صفحه اصلی",
     nav_contact_me_link: "تماس با من",
     nav_personal_projects_link: "پروژه‌های شخصی",

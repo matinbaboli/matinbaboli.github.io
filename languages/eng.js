@@ -1,4 +1,5 @@
- export const en ={
+export const en ={
+    blank: "",
     nav_home_link: "Home",
     nav_contact_me_link: "Contact me",
     nav_personal_projects_link: "Personal Projects",
@@ -27,4 +28,3 @@
     view_project: "View Project",
     official_projects_page_title: "Official Projects"
 }
-

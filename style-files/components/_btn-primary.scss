@@ -13,11 +13,11 @@
 
 .btn-primary-small {
   padding-inline: 15px;
-  padding-block: 7px;
-  @include font-and-letterspacing-control($mainFont, 500, 2px, 1);
+  padding-block: 10px;
+  @include font-and-letterspacing-control($mainFont, 500, 2px, 0.9);
 }
 .btn-primary-big {
-  padding-inline: 27px;
-  padding-block: 7px;
-  @include font-and-letterspacing-control($mainFont, 500, 3px, 1.2);
+  padding-inline: 22px;
+  padding-block: 13px;
+  @include font-and-letterspacing-control($mainFont, 500, 3px, 1.1);
 }

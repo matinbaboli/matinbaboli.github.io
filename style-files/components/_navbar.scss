@@ -71,7 +71,7 @@
 .navbar-links-big-screen {
   display: none;
   height: 100%;
-  @include font-and-letterspacing-control($mainFont, 500, 3px, 1);
+  @include font-and-letterspacing-control($mainFont, 500, 2px, 0.9);
   & ul {
     height: 100%;
     gap: 30px;
@@ -89,6 +89,19 @@
 .not-hovered-navbar-link {
   color: gray;
 }
+
+.resume-download-btn {
+  padding: 5px 13px;
+  @include font-and-letterspacing-control($mainFont, 400, 2px, 0.7);
+  border: 1px solid $secondary-color;
+  border-radius: 7px;
+  transform: translateY(-500px);
+  & img {
+    transform: translateY(4px);
+  }
+}
+
+
 @include mid-screen-meida {
   .navbar-links {
     display: block;

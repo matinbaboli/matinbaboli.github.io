@@ -120,16 +120,6 @@ h2 {
   left: 0;
 }
 
-.resume-download-btn {
-  padding: 5px 10px;
-  @include font-and-letterspacing-control($mainFont, 400, 3px, 0.7);
-  border: 1px solid $secondary-color;
-  border-radius: 7px;
-  transform: translateY(-500px);
-  & img {
-    transform: translateY(4px);
-  }
-}
 
 @include mid-screen-meida {
   :root {

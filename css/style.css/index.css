@@ -12,20 +12,6 @@ body {
   color: white;
 }
 
-select {
-  font-family: "Akshar";
-  font-weight: 400;
-  letter-spacing: 1px;
-  font-size: calc(var(--baseFontSize) * 0.8);
-  background: #1a1a1a;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding-inline: 10px;
-  padding-block: 3px;
-  transform: translateY(5px);
-}
-
 button {
   background: none;
   border: none;
@@ -81,18 +67,20 @@ h2 {
   width: 100%;
   direction: ltr;
 }
-.header-navbar div {
+.header-navbar > div {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 2;
   height: 80px;
-  padding: 0 30px 10px 30px;
+  padding-bottom: 10px;
+  padding-inline: 30px;
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
   background: rgba(0, 0, 0, 0.2);
   display: flex;
+  flex-direction: none;
   justify-content: space-between;
   align-items: end;
 }
@@ -154,8 +142,8 @@ h2 {
   height: 100%;
   gap: 30px;
   display: flex;
-  flex-direction: 0;
-  justify-content: 0;
+  flex-direction: row;
+  justify-content: center;
   align-items: end;
 }
 .navbar-links-big-screen ul li {
@@ -169,18 +157,41 @@ h2 {
   color: gray;
 }
 
+.resume-logo-and-language-selector-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.resume-logo-and-language-selector-container > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+  height: 30px;
+  gap: 20px;
+}
+.resume-logo-and-language-selector-container > div > select {
+  font-family: "Akshar";
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: calc(var(--baseFontSize) * 0.8);
+  background: #1a1a1a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding-inline: 10px;
+}
+
 .resume-download-btn {
-  padding: 5px 13px;
+  padding: 7px 11px;
   font-family: "Akshar";
   font-weight: 400;
   letter-spacing: 2px;
   font-size: calc(var(--baseFontSize) * 0.7);
-  border: 1px solid #eb9500;
+  border: 1px solid #c2a875;
   border-radius: 7px;
-  transform: translateY(-500px);
-}
-.resume-download-btn img {
-  transform: translateY(4px);
 }
 
 @media (min-width: 700px) {
@@ -193,8 +204,8 @@ h2 {
   }
 }
 @media (min-width: 1000px) {
-  .header-navbar div {
-    padding: 0 53px 10px 53px;
+  .header-navbar > div {
+    padding-inline: 140px;
   }
   .navbar-links-big-screen {
     display: block;
@@ -211,7 +222,7 @@ h2 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: #b5893c;
+  background: linear-gradient(to top, #574416 -80%, #c2a875);
   padding-block: 40px;
   padding-inline: 30px;
   font-family: "Akshar";
@@ -274,7 +285,7 @@ h2 {
   justify-content: center;
   align-items: center;
   isolation: isolate;
-  background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0) 250px);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0) 250px);
   background-color: #1a1a1a;
   overflow: hidden;
 }
@@ -297,7 +308,7 @@ h2 {
   left: 0;
   right: 0;
   z-index: -3;
-  background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0) 250px), linear-gradient(140deg, #1f8cff 10%, #ffad1f 90% 200px), url("../../images/texture35yu2.jpg");
+  background: linear-gradient(to top, rgb(0, 0, 0), rgba(0, 0, 0, 0) 250px), linear-gradient(140deg, #1f8cff 10%, #d2be98 70%), url("../../images/texture35yu2.jpg");
   background-size: cover;
   background-position: center;
   background-blend-mode: soft-light;
@@ -334,7 +345,7 @@ h2 {
   top: 120px;
   left: 150px;
   width: 110px;
-  filter: drop-shadow(3px -4px 5px #eb9500);
+  filter: drop-shadow(3px -4px 5px #c2a875);
 }
 
 @media (min-width: 700px) {
@@ -361,19 +372,23 @@ h2 {
   }
 }
 .btn-primary {
-  background: #eb9500;
+  background: #c2a875;
+  display: inline-block;
+  min-width: 100px;
+  text-align: center;
+  padding-block: 6px;
   border-radius: 7px;
   color: white;
   cursor: pointer;
   transition: box-shadow 150ms linear;
 }
 .btn-primary:hover {
-  box-shadow: 0px 0px 10px #eb9500, 0px 0px 35px #eb9500;
+  box-shadow: 0px 0px 10px #c2a875, 0px 0px 35px #c2a875;
 }
 
 .btn-primary-small {
-  padding-inline: 15px;
-  padding-block: 10px;
+  padding-inline: 10px;
+  padding-block: 8px;
   font-family: "Akshar";
   font-weight: 500;
   letter-spacing: 2px;
@@ -381,18 +396,18 @@ h2 {
 }
 
 .btn-primary-big {
-  padding-inline: 22px;
+  padding-inline: 15px;
   padding-block: 13px;
   font-family: "Akshar";
   font-weight: 500;
   letter-spacing: 3px;
-  font-size: calc(var(--baseFontSize) * 1.1);
+  font-size: calc(var(--baseFontSize) * 1.05);
 }
 
 .about-section {
   position: relative;
   box-sizing: border-box;
-  min-height: 100vh;
+  min-height: 50vh;
   padding-block: 150px;
   padding-inline: 30px;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0) 50% 400px, rgba(0, 0, 0, 0.7)), #1a1a1a;
@@ -429,6 +444,10 @@ h2 {
   margin-block: 30px;
   margin-inline: auto;
   filter: brightness(0.9);
+}
+
+#about-description-and-image {
+  opacity: 0;
 }
 
 @media (min-width: 700px) {
@@ -494,6 +513,10 @@ h2 {
   opacity: 100%;
 }
 
+#projects-link {
+  opacity: 0;
+}
+
 .overlay {
   position: absolute;
   top: 0;
@@ -507,13 +530,13 @@ h2 {
   background: linear-gradient(165deg, #004185 5% 80px, rgba(0, 0, 0, 0));
 }
 .overlay-secondary-color {
-  background: linear-gradient(165deg, #855400 5% 80px, rgba(0, 0, 0, 0));
+  background: linear-gradient(165deg, #917640 5% 80px, rgba(0, 0, 0, 0));
 }
 
 .projects-section {
   position: relative;
   box-sizing: border-box;
-  min-height: 100vh;
+  min-height: 50vh;
   padding-block: 150px;
   padding-inline: 30px;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0) 50% 400px, rgba(0, 0, 0, 0.7)), #1a1a1a;
@@ -602,7 +625,7 @@ h2 {
 .skills-section {
   position: relative;
   box-sizing: border-box;
-  min-height: 100vh;
+  min-height: 50vh;
   padding-block: 150px;
   padding-inline: 30px;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0) 50% 400px, rgba(0, 0, 0, 0.7)), #1a1a1a;
@@ -618,6 +641,10 @@ h2 {
 }
 .skills-section h2 {
   margin-bottom: 60px;
+}
+
+.skill-item {
+  opacity: 0;
 }
 
 .my-skills-icon {
@@ -676,7 +703,8 @@ h2 {
   font-family: "Akshar";
   font-weight: 400;
   letter-spacing: 3px;
-  font-size: calc(var(--baseFontSize) * 1.2);
+  font-size: calc(var(--baseFontSize) * 1.1);
+  line-height: 35px;
 }
 
 .social-links {
@@ -693,15 +721,20 @@ h2 {
   padding-bottom: 15px;
 }
 .social-links a {
-  color: #eb9500;
+  color: #c2a875;
 }
 .social-links a:hover {
-  filter: drop-shadow(0px 0px 5px #eb9500);
+  filter: drop-shadow(0px 0px 5px #c2a875);
 }
 .social-links img {
   width: 25px;
   margin-right: 5px;
   transform: translateY(5px);
+}
+
+.social-icon {
+  fill: #c2a875;
+  color: #c2a875;
 }
 
 @media (min-width: 700px) {
@@ -835,7 +868,7 @@ h2 {
 .project-card p {
   float: right;
   margin: 12px 20px;
-  color: #eb9500;
+  color: #c2a875;
   opacity: 0;
   transition: opacity 150ms ease-in-out;
   font-family: "Akshar";
@@ -877,7 +910,7 @@ h2 {
 .contact-reminder-wraper {
   grid-column: 1/-1;
   padding: 20px;
-  border: 1px solid #eb9500;
+  border: 1px solid #c2a875;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -905,7 +938,7 @@ h2 {
   padding-inline: 20px;
   padding-block: 60px;
   background: #1a1a1a;
-  border: 1px solid #eb9500;
+  border: 1px solid #c2a875;
   border-radius: 10px;
   color: white;
 }

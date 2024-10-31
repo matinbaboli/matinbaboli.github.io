@@ -20,7 +20,7 @@
 }
 
 .projects-page {
-  @include general-section-control();
+  @include general-section-control($fullheight: true);
   overflow: hidden;
 
   & h1 {

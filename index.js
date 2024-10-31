@@ -3,13 +3,14 @@ import {fa} from "./languages/fa.js"
 
 const openMenuButton = document.getElementById("open-menu-btn")
 const closeMenuButton = document.getElementById("close-menu-btn")
-const navbarLinks = document.getElementById('navbar-links-id')
+const navigationMenu = document.getElementById('navbar-links-id')
 const languageSelectorBigScreen = document.getElementById('language-selector-big-screen')
 const languageSelectorSmallScreen = document.getElementById('language-selector-small-screen')
 
 const projectsLinkExplanation = document.querySelector('.projects-link-explanation')
-const allTexts = document.querySelectorAll('#text')
+const bigScreenNavbarLinksContainer = document.querySelector('.navbar-links-big-screen')
 const bigScreenNavbarLinks = document.querySelectorAll('.navbar-links-big-screen .hover-effect')
+const allTexts = document.querySelectorAll('#text')
 const projectsPageLinkNodes = document.querySelectorAll('#projects-link')
 const projectsPageLinkArray = Array.from(projectsPageLinkNodes)
 
@@ -26,6 +27,7 @@ let translationId
         if (sessionStorage.language === "fa") {
             text.innerHTML += fa[translationId]
             document.body.style.direction = "rtl"
+            bigScreenNavbarLinksContainer.style.direction= "rtl"
             allTexts.forEach(text => {
                 text.style.letterSpacing = '1px'
                 text.style.fontFamily = 'Noto Sans Arabic'
@@ -58,7 +60,7 @@ projectsPageLinkArray.forEach((link) => {
     }
     
     link.addEventListener("mouseover", () => {
-        if (languageSelector.value === "fa") {
+        if (languageSelectorBigScreen.value === "fa") {
             projectsLinkExplanation.textContent = fa[dynamicTextId]
         } else {
             projectsLinkExplanation.textContent = en[dynamicTextId]
@@ -73,11 +75,11 @@ projectsPageLinkArray.forEach((link) => {
 
 
 openMenuButton.addEventListener("click", () => {
-    navbarLinks.classList.add('menu-open')
+    navigationMenu.classList.add('menu-open')
     openMenuButton.style.visibility = 'hidden'
 })
 closeMenuButton.addEventListener("click", () => {
-    navbarLinks.classList.remove('menu-open')
+    navigationMenu.classList.remove('menu-open')
     openMenuButton.style.visibility = 'visible'
 })
 

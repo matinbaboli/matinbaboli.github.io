@@ -2,6 +2,10 @@
 
 .btn-primary {
   background: $secondary-color;
+  display: inline-block;
+  min-width: 100px;
+  text-align: center;
+  padding-block: 6px;
   border-radius: 7px;
   color: white;
   cursor: pointer;
@@ -12,12 +16,12 @@
 }
 
 .btn-primary-small {
-  padding-inline: 15px;
-  padding-block: 10px;
+  padding-inline: 10px;
+  padding-block: 8px;
   @include font-and-letterspacing-control($mainFont, 500, 2px, 0.9);
 }
 .btn-primary-big {
-  padding-inline: 22px;
+  padding-inline: 15px;
   padding-block: 13px;
-  @include font-and-letterspacing-control($mainFont, 500, 3px, 1.1);
+  @include font-and-letterspacing-control($mainFont, 500, 3px, 1.05);
 }

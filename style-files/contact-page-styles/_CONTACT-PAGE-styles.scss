@@ -1,5 +1,6 @@
 .contact-me-page {
-  @include general-section-control();
+  // @include general-section-control();
+  @include general-section-control($fullheight: true);
   & h1 {
     text-align: center;
   }
@@ -16,7 +17,8 @@
   gap: 30px;
   width: 100%;
   padding-top: 105px;
-  @include font-and-letterspacing-control($mainFont, 400, 3px, 1.2);
+  @include font-and-letterspacing-control($mainFont, 400, 3px, 1.1);
+  line-height: 35px;
 }
 
 .social-links {
@@ -40,6 +42,11 @@
     margin-right: 5px;
     transform: translateY(5px);
   }
+}
+
+.social-icon {
+  fill: $secondary-color;
+  color: $secondary-color;
 }
 
 @include mid-screen-meida {

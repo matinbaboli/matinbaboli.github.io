@@ -14,9 +14,19 @@
 <body>
     <header class="header-navbar">
         <div>
-            <a href="./index.html" class="header-navbar_logo">
-                <img src="./Logo-png.png" alt="logo"></img>
-            </a>
+            <div class="resume-logo-and-language-selector-container">
+                <a href="./index.html" class="header-navbar_logo">
+                    <img src="./Logo-png.png" alt="logo"></img>
+                </a>
+                <div>
+                    <a id="text" data-translation-id="resume_download_btn" class="resume-download-btn" href="./MyResume.pdf" download>
+                    </a>
+                    <select name="language" id="language-selector-big-screen">
+                        <option value="en">Eng</option>
+                        <option value="fa">Fa</option>
+                    </select>
+                </div>
+            </div>
             <button id="open-menu-btn" class="open-menu-btn">
                 <img src="icons/burger-menu-icon.svg" alt="menu-logo"></img>
             </button>
@@ -42,16 +52,6 @@
                         <a id="text" data-translation-id="nav_official_projects_link" class="hover-effect"
                             href="./official-projects.html">
             
-                        </a>
-                    </li>
-                    <li>
-                        <select name="language" id="language-selector-big-screen">
-                            <option value="en">Eng</option>
-                            <option value="fa">Fa</option>
-                        </select>
-                    </li>
-                    <li>
-                        <a id="text" data-translation-id="resume_download_btn" class="resume-download-btn" href="./MyResume.pdf" download>
                         </a>
                     </li>
                 </ul>
@@ -106,26 +106,26 @@
             <article class="contact-me-page-content">
                 <div class="email-option-container">
                     <p id="text" data-translation-id="want_to_start_a_project"></p>
-                    <a id="text" data-translation-id="email_me" href="mailto:matinbaboli851@gmail.comsubject=Looking%20for%20a%20front-end%20developer" class="btn-primary btn-primary-big"></a>
+                    <a id="text" data-translation-id="email_me" href="mailto:matinbaboli851@gmail.comsubject=Looking%20for%20a%20front-end%20developer" class="btn-primary btn-primary-small"></a>
                 </div>
                 <p id="text" data-translation-id="or"></p>
                 <nav class="social-links">
                     <li>
                         <a target="-blank" href="https://www.instagram.com/bamatinn">
-                            <img src="./icons/social-icons/instagram-icon.svg" alt="instagram-icon">
+                            <img class="social-icon" src="./icons/social-icons/instagram-icon.svg" alt="instagram-icon">
                             DM me
                         </a>
                     </li>
                     <li>
                         <a target="-blank" href="https://www.linkedin.com/in/matin-baboli-2b0046219">
-                            <img src="./icons/social-icons/linkedin-icon.svg" alt="linked-in-icon">
+                            <img class="social-icon" src="./icons/social-icons/linkedin-icon.svg" alt="linked-in-icon">
 
                             Link me
                         </a>
                     </li>
                     <li>
-                        <a target="-blank" href="https://t.me/bmatina">
-                            <img src="./icons/social-icons/telegram-icon.svg" alt="telegram-icon">
+                        <a target="-blank" href="https://t.me/matinnbaa">
+                            <img class="social-icon" style="fill: #c2a875;" src="./icons/social-icons/telegram-icon.svg" alt="telegram-icon">
                             Telegram me
                         </a>
                     </li>

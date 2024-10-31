@@ -1,5 +1,6 @@
 import {en} from "../languages/eng.js"
 import {fa} from "../languages/fa.js"
+import projects from "../data/personal-projects.json"
 
 
 const projectCardsWraper = document.getElementById("project-cards-wraper")
@@ -7,18 +8,20 @@ const projectCardsWraper = document.getElementById("project-cards-wraper")
 const ProjectDetailsModal = document.querySelector('.project-info-modal')
 
 
-async function start() {
-    const response = await fetch("../data/personal-projects.json")
-    const personalProjects = await response.json()
-    createProjectCards(personalProjects)
-    openAndCloseDetails(personalProjects)
+function start() {
+    // const response = await fetch("../data/personal-projects.json")
+    // const personalProjects = await response.json()
+    // console.log(personalProjects)
+    createProjectCards()
+    openAndCloseDetails()
 } 
 start()
 
-function createProjectCards(personalProjects) {
-    projectCardsWraper.innerHTML = personalProjects.map(item => {
+function createProjectCards() {
+    projectCardsWraper.innerHTML = projects.personalProjects.map(item => {
         const {thumbnailImage, englishTitle, farsiTitle, id} = item
         let title = sessionStorage.language === "en" ? englishTitle: farsiTitle
+        // console.log(thumbnailImage)
         // let shortenedTitle = title.substring(0, 8) + "..."
         return `
                 <div id="${id}" class="project-card">
@@ -38,7 +41,7 @@ function createProjectCards(personalProjects) {
     
 }
 
-function openAndCloseDetails(personalProjects) {
+function openAndCloseDetails() {
     const projectCardNodes = document.querySelectorAll('.project-card')
     const projectCards = Array.from(projectCardNodes)
 
@@ -47,7 +50,7 @@ function openAndCloseDetails(personalProjects) {
             ProjectDetailsModal.showModal()
             ProjectDetailsModal.style.animation = 'modal-open 500ms'
             let projectId = Number(e.currentTarget.id)
-            handleModalDataForEachCard(projectId, personalProjects)
+            handleModalDataForEachCard(projectId)
 
         })
     })
@@ -58,7 +61,7 @@ function openAndCloseDetails(personalProjects) {
     // console.log(projectCards)
 }
 
-function handleModalDataForEachCard(projectId, personalProjects) {
+function handleModalDataForEachCard(projectId) {
     let filteredProjects = personalProjects.filter(item => item.id === projectId)
     let {showcaseImages, englishTitle, englishDescription, farsiTitle, farsiDescription, technologies, projectLink} = filteredProjects[0]
     let title = sessionStorage.language === "en" ? englishTitle: farsiTitle
@@ -121,5 +124,5 @@ function addDynamicText() {
             text.innerHTML += en[translationId]
         }
     })
-    console.log("clicked")
+    // console.log("clicked")
 }

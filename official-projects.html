@@ -14,11 +14,21 @@
 <body>
     <header class="header-navbar">
         <div>
-            <a href="./index.html" class="header-navbar_logo">
-                <img src="./Logo-png.png" alt="logo"></img>
-            </a>
+            <div class="resume-logo-and-language-selector-container">
+                <a href="./index.html" class="header-navbar_logo">
+                    <img src="./Logo-png.png" alt="logo"></img>
+                </a>
+                <div>
+                    <a id="text" data-translation-id="resume_download_btn" class="resume-download-btn" href="./MyResume.pdf" download>
+                    </a>
+                    <select name="language" id="language-selector-big-screen">
+                        <option value="en">Eng</option>
+                        <option value="fa">Fa</option>
+                    </select>
+                </div>
+            </div>
             <button id="open-menu-btn" class="open-menu-btn">
-                <img src="icons/burger-menu-icon.svg" alt="menu-icon"></img>
+                <img src="icons/burger-menu-icon.svg" alt="menu-logo"></img>
             </button>
             <nav class="navbar-links-big-screen">
                 <ul>
@@ -44,20 +54,10 @@
             
                         </a>
                     </li>
-                    <li>
-                        <select name="language" id="language-selector-big-screen">
-                            <option value="en">Eng</option>
-                            <option value="fa">Fa</option>
-                        </select>
-                    </li>
-                    <li>
-                        <a id="text" data-translation-id="resume_download_btn" class="resume-download-btn" href="./MyResume.pdf" download>
-                        </a>
-                    </li>
                 </ul>
             
             </nav>
-
+    
         </div>
         <nav id="navbar-links-id" class="navbar-links">
 

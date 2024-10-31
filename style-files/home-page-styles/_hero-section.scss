@@ -5,7 +5,7 @@
   text-align: center;
   @include flexbox-control(column);
   isolation: isolate;
-  background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0) 250px);
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0) 250px);
   background-color: $background-color;
   overflow: hidden;
 
@@ -31,7 +31,7 @@
     linear-gradient(
       140deg,
       adjust-color($primary-color, $lightness: +10%) 10%,
-      adjust-color($secondary-color, $lightness: +10%) 90% 200px
+      adjust-color($secondary-color, $lightness: +10%) 70% 
     ),
     url("../../images/texture35yu2.jpg");
   background-size: cover;

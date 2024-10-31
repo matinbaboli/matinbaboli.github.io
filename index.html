@@ -14,48 +14,50 @@
 <body>
     <header class="header-navbar">
         <div>
-            <a href="./index.html" class="header-navbar_logo">
-                <img  src="./Logo-png.png" alt="logo"></img>
-            </a>        
+            <div class="resume-logo-and-language-selector-container">
+                <a href="./index.html" class="header-navbar_logo">
+                    <img src="./Logo-png.png" alt="logo"></img>
+                </a>
+                <div>
+                    <a id="text" data-translation-id="resume_download_btn" class="resume-download-btn" href="./MyResume.pdf" download>
+                    </a>
+                    <select name="language" id="language-selector-big-screen">
+                        <option value="en">Eng</option>
+                        <option value="fa">Fa</option>
+                    </select>
+                </div>
+            </div>
             <button id="open-menu-btn" class="open-menu-btn">
-                <img src="icons/burger-menu-icon.svg" alt="menu-icon"></img>
+                <img src="icons/burger-menu-icon.svg" alt="menu-logo"></img>
             </button>
             <nav class="navbar-links-big-screen">
-                            <ul>
-                                <li>
-                                    <a id="text" data-translation-id="nav_home_link" class="hover-effect" href="./index.html">
-                                        
-                                    </a>
-                                </li>
-                                <li>
-                                    <a id="text" data-translation-id="nav_contact_me_link" class="hover-effect" href="./contact-me.html">
-                                    
-                                    </a>
-                                </li>
-                                <li>
-                                    <a id="text" data-translation-id="nav_personal_projects_link" class="hover-effect" href="./personal-projects.html">
-                                        
-                                    </a>
-                                </li>
-                                <li>
-                                    <a id="text" data-translation-id="nav_official_projects_link" class="hover-effect" href="./official-projects.html">
-                                
-                                    </a>
-                                </li>
-                                <li>
-                                    <select name="language" id="language-selector-big-screen">
-                                        <option value="en">Eng</option> 
-                                        <option value="fa">Fa</option> 
-                                    </select>
-                                </li>
-                                <li>
-                                    <a id="text" data-translation-id="resume_download_btn" class="resume-download-btn" href="./MyResume.pdf" download>
-                                    </a>
-                                </li>
-                            </ul>
-                            
-            </nav>
+                <ul>
+                    <li>
+                        <a id="text" data-translation-id="nav_home_link" class="hover-effect" href="./index.html">
             
+                        </a>
+                    </li>
+                    <li>
+                        <a id="text" data-translation-id="nav_contact_me_link" class="hover-effect" href="./contact-me.html">
+            
+                        </a>
+                    </li>
+                    <li>
+                        <a id="text" data-translation-id="nav_personal_projects_link" class="hover-effect"
+                            href="./personal-projects.html">
+            
+                        </a>
+                    </li>
+                    <li>
+                        <a id="text" data-translation-id="nav_official_projects_link" class="hover-effect"
+                            href="./official-projects.html">
+            
+                        </a>
+                    </li>
+                </ul>
+            
+            </nav>
+    
         </div>
         <nav id="navbar-links-id" class="navbar-links">
             
@@ -100,9 +102,9 @@
     </header>
     <main>
         <section class="hero-section">
-            <article>
-                <h1>MATIN BABOLI</h1>
-                <p>FRONT-END WEB DEVELOPER</p>
+            <article id="home-hero-section">
+                <h1 id="my-main-info">MATIN BABOLI</h1>
+                <p id="my-main-info">FRONT-END WEB DEVELOPER</p>
             </article>
             <div class="hero-background-image-wraper"></div>
             <div class="hero-shapes-container">
@@ -117,11 +119,12 @@
                 <img class="mask-lightning" src="./images/lightning-mask.png" alt="lightning shape">
                 <div class="about-text-container">
                     <h2 id="text" data-translation-id="about_me_title"></h2>
-
-                    <p id="text" data-translation-id="about_me_first_p"></p>
-                    <img src="./images/my-picture4.jpg" alt="matin's picture">
-                    <p id="text" data-translation-id="about_me_second_p"></p>
-                    <p id="text" data-translation-id="about_me_third_p"></p>
+                    <div id="about-description-and-image">
+                        <p id="text" data-translation-id="about_me_first_p"></p>
+                        <img src="./images/my-picture4.jpg" alt="matin's picture">
+                        <p id="text" data-translation-id="about_me_second_p"></p>
+                        <p id="text" data-translation-id="about_me_third_p"></p>
+                    </div>
                 </div>
                 <div>
                     <a id="text" data-translation-id="nav_contact_me_link" href="./contact-me.html" class="btn-primary btn-primary-big"></a>
@@ -136,7 +139,7 @@
                     <p id="text" class="projects-link-explanation">
                     </p>
                 </div>
-                <div class="section-half">
+                <div class="section-half projects-links-container">
                     <a id="projects-link" href="./official-projects.html">
                         <div class="go-to-projects-link">
                             <div class="overlay overlay-primary-color"></div>
@@ -262,15 +265,10 @@
     </footer>
 
     <script type="module" src="index.js"></script>
+    <script type="module" src="./js/animations.js"></script>
+
                 
 </body>
 </html>
-
-
-<!-- 
-    write a good resume and attach it to the download btn
-
-    add a good picture to the about me section
--->
 
 

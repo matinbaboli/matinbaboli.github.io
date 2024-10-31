@@ -1,21 +1,22 @@
-// @import "../global-definitions";
+// @import "../_global-definitions";
 
 .header-navbar {
   box-sizing: border-box;
   width: 100%;
   direction: ltr;
 
-  & div {
+  & > div {
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     z-index: 2;
     height: 80px;
-    padding: 0 30px 10px 30px;
+    padding-bottom: 10px;
+    padding-inline: 30px;
     backdrop-filter: blur(10px);
     background: rgba(0, 0, 0, 0.2);
-    @include flexbox-control(null, space-between, end);
+    @include flexbox-control(none, space-between, end);
   }
 
   &_logo img {
@@ -75,7 +76,7 @@
   & ul {
     height: 100%;
     gap: 30px;
-    @include flexbox-control(0, 0, end);
+    @include flexbox-control(row, center, end);
     & li {
       padding-bottom: 20px;
 
@@ -90,15 +91,30 @@
   color: gray;
 }
 
+.resume-logo-and-language-selector-container {
+  @include flexbox-control(row, center, center);
+  gap: 40px;
+  // padding-bottom: 20px;
+  & > div {
+    @include flexbox-control(row, center, stretch);
+    height: 30px;
+    gap: 20px;
+    & > select {
+      @include font-and-letterspacing-control($mainFont, 400, 1px, 0.8);
+      background: $background-color;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      padding-inline: 10px;
+    }
+  }
+}
+
 .resume-download-btn {
-  padding: 5px 13px;
+  padding: 7px 11px;
   @include font-and-letterspacing-control($mainFont, 400, 2px, 0.7);
   border: 1px solid $secondary-color;
   border-radius: 7px;
-  transform: translateY(-500px);
-  & img {
-    transform: translateY(4px);
-  }
 }
 
 
@@ -112,14 +128,10 @@
   }
 }
 
-// i added the change language feature to the mobile screen code but it doesn't work, the reason might be because of the big screen navbar wich still exists in the code and js selects the language changer from there because it comes first.
-
-// also before you even think about running the sass compiler, first configure the settings so it doesn't messup your files
-
 @include big-screen-meida {
   .header-navbar {
-    & div {
-      padding: 0 53px 10px 53px;
+    & > div {
+      padding-inline: 140px;
     }
   }
   .navbar-links-big-screen {

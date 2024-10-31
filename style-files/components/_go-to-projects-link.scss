@@ -1,6 +1,5 @@
 .go-to-projects-link {
   direction: ltr;
-
   box-sizing: border-box;
   position: relative;
   isolation: isolate;
@@ -45,6 +44,11 @@
       opacity: 100%;
     }
   }
+}
+
+#projects-link {
+  opacity: 0;
+
 }
 
 .overlay {

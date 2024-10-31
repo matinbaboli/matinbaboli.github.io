@@ -1,6 +1,12 @@
 .footer-navigation {
   @include flexbox-control(column);
-  background: $secondary-color-dirty;
+  // background: $secondary-color-dirty;
+  background: linear-gradient(
+    to top,
+    $secondary-color-dirty -80%,
+    $secondary-color
+  );
+
   padding-block: 40px;
   padding-inline: $generalInlinePadding;
   @include font-and-letterspacing-control($mainFont, 400, 2px, 1.05);

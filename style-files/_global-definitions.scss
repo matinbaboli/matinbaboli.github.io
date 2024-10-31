@@ -1,8 +1,6 @@
 $primary-color: #0072eb;
-$primary-color-dirty: #3b72ad;
-$primary-color-dark: #38434f;
-$secondary-color: #eb9500;
-$secondary-color-dirty: #b5893c;
+$secondary-color: #c2a875;
+$secondary-color-dirty: #574416;
 $background-color: #1a1a1a;
 
 $mainFont: "Akshar";
@@ -41,10 +39,14 @@ $generalInlinePadding: 30px;
   align-items: $alignItems;
 }
 
-@mixin general-section-control {
+@mixin general-section-control ($fullheight: false) {
   position: relative;
   box-sizing: border-box;
-  min-height: 100vh;
+  @if $fullheight {
+    min-height: 100vh;
+  } @else {
+    min-height: 50vh;
+  }
   padding-block: $generalBlockPadding;
   padding-inline: $generalInlinePadding;
   background: linear-gradient(
@@ -76,17 +78,6 @@ body {
   color: white;
 }
 
-select {
-  @include font-and-letterspacing-control($mainFont, 400, 1px, 0.8);
-  background: $background-color;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding-inline: 10px;
-  padding-block: 3px;
-  transform: translateY(5px);
-}
-
 button {
   background: none;
   border: none;
@@ -100,7 +91,6 @@ a {
 
 h1,
 h2 {
-  // @include font-and-letterspacing-control($farsiFont, 700, 2px, 2.2);
   @include font-and-letterspacing-control($mainFont, 700, 7px, 2.2);
 }
 

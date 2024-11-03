@@ -1,6 +1,6 @@
 import {en} from "../languages/eng.js"
 import {fa} from "../languages/fa.js"
-import projects from "../data/personal-projects.json"
+import personalProjects from "../data/personal-projects.json"
 
 
 const projectCardsWraper = document.getElementById("project-cards-wraper")
@@ -11,14 +11,15 @@ const ProjectDetailsModal = document.querySelector('.project-info-modal')
 function start() {
     // const response = await fetch("../data/personal-projects.json")
     // const personalProjects = await response.json()
-    // console.log(personalProjects)
+    console.log(personalProjects)
     createProjectCards()
     openAndCloseDetails()
 } 
 start()
 
 function createProjectCards() {
-    projectCardsWraper.innerHTML = projects.personalProjects.map(item => {
+    const fixed = new URL("../public/icons/arrow-right-icon.svg", import.meta.url)
+    projectCardsWraper.innerHTML = personalProjects.map(item => {
         const {thumbnailImage, englishTitle, farsiTitle, id} = item
         let title = sessionStorage.language === "en" ? englishTitle: farsiTitle
         // console.log(thumbnailImage)
@@ -29,7 +30,7 @@ function createProjectCards() {
                     <div>
                         <h2 id="dynamic-text" data-translation-id="blank">${title}</h2>
                         <p id="text" data-translation-id="more_details">
-                            <img src="./icons/arrow-right-icon.svg" alt="arrow">
+                            <img src=${fixed} alt="arrow">
                         </p>
                     </div>
                 </div>
@@ -69,7 +70,7 @@ function handleModalDataForEachCard(projectId) {
 
     ProjectDetailsModal.innerHTML = `
             <button id="close-modal-btn">
-                <img src="./icons/navbar-icons/close-icon.svg" alt="close-modal">
+                <img src="./public/icons/navbar-icons/close-icon.svg" alt="close-modal">
             </button>
             <div class="project-modal-content-wraper">
             <h2 id="dynamic-text" data-translation-id="blank">${title}</h2>

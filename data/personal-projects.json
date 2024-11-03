@@ -1,20 +1,19 @@
-{
-    "personalProjects": [
-        {
-            "id": 1,
-            "thumbnailImage": "./images/project images/guitar world/main.jpg",
-            "showcaseImages": [
-                "./images/project images/guitar world/preview1.jpg",
-                "./images/project images/guitar world/preview2.jpg",
-                "./images/project images/guitar world/preview3.jpg"
-            ],
-            "englishTitle": "Guitar World",
-            "englishDescription": "This is an online shop for buying different kinds of guitars which contains a homepage, about us, catalog(with filtering feature) and more...",
-            "farsiTitle": "پروژه دنیای گیتار",
-            "farsiDescription": "این پروژه یک فروشگاه انلاین برای فروش انواع گیتار میباشد که شامل صفحات مختلفی از جمله صفحه اصلی، درباره ما، کاتالوگ با قابلیت فیلتر محصولات و... میباشد. ",
-            "technologies": ["React", "Material UI", "figma"],
-            "projectLink": "https://matinbaboli.github.io/guitar-world-store-project"
-        }
-    ]
-}
+[
+    {
+        "id": 1,
+        "thumbnailImage": "./images/project images/guitar world/main.jpg",
+        "showcaseImages": [
+            "./images/project images/guitar world/preview1.jpg",
+            "./images/project images/guitar world/preview2.jpg",
+            "./images/project images/guitar world/preview3.jpg"
+        ],
+        "englishTitle": "Guitar World",
+        "englishDescription": "This is an online shop for buying different kinds of guitars which contains a homepage, about us, catalog(with filtering feature) and more...",
+        "farsiTitle": "پروژه دنیای گیتار",
+        "farsiDescription": "این پروژه یک فروشگاه انلاین برای فروش انواع گیتار میباشد که شامل صفحات مختلفی از جمله صفحه اصلی، درباره ما، کاتالوگ با قابلیت فیلتر محصولات و... میباشد. ",
+        "technologies": ["React", "Material UI", "figma"],
+        "projectLink": "https://matinbaboli.github.io/guitar-world-store-project"
+    }
+]
+
     

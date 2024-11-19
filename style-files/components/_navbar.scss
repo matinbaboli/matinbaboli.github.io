@@ -95,19 +95,11 @@
   @include flexbox-control(row, center, center);
   gap: 40px;
   // padding-bottom: 20px;
-  & > div {
-    @include flexbox-control(row, center, stretch);
-    height: 30px;
-    gap: 20px;
-    & > select {
-      @include font-and-letterspacing-control($mainFont, 400, 1px, 0.8);
-      background: $background-color;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      padding-inline: 10px;
-    }
-  }
+}
+
+.change-language-and-download-resume-container {
+  display: none;
+  height: 30px;
 }
 
 .resume-download-btn {
@@ -115,6 +107,15 @@
   @include font-and-letterspacing-control($mainFont, 400, 2px, 0.7);
   border: 1px solid $secondary-color;
   border-radius: 7px;
+}
+
+.language-selector {
+  @include font-and-letterspacing-control($mainFont, 400, 1px, 0.8);
+  background: $background-color;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding-inline: 10px;
 }
 
 
@@ -137,6 +138,12 @@
   .navbar-links-big-screen {
     display: block;
   }
+
+  .change-language-and-download-resume-container {
+    @include flexbox-control(row, center, stretch);
+    gap: 20px;
+    }
+  
 
   .open-menu-btn {
     display: none;

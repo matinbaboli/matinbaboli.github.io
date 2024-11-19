@@ -164,24 +164,10 @@ h2 {
   align-items: center;
   gap: 40px;
 }
-.resume-logo-and-language-selector-container > div {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: stretch;
+
+.change-language-and-download-resume-container {
+  display: none;
   height: 30px;
-  gap: 20px;
-}
-.resume-logo-and-language-selector-container > div > select {
-  font-family: "Akshar";
-  font-weight: 400;
-  letter-spacing: 1px;
-  font-size: calc(var(--baseFontSize) * 0.8);
-  background: #1a1a1a;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  padding-inline: 10px;
 }
 
 .resume-download-btn {
@@ -192,6 +178,18 @@ h2 {
   font-size: calc(var(--baseFontSize) * 0.7);
   border: 1px solid #c2a875;
   border-radius: 7px;
+}
+
+.language-selector {
+  font-family: "Akshar";
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: calc(var(--baseFontSize) * 0.8);
+  background: #1a1a1a;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding-inline: 10px;
 }
 
 @media (min-width: 700px) {
@@ -209,6 +207,13 @@ h2 {
   }
   .navbar-links-big-screen {
     display: block;
+  }
+  .change-language-and-download-resume-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
   }
   .open-menu-btn {
     display: none;

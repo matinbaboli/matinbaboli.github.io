@@ -1,4 +1,4 @@
-import{f as h,e as f}from"./index-BnQtNDKs.js";const u=document.getElementById("project-cards-wraper"),s=document.querySelector(".project-info-modal");async function v(){const e=await(await fetch("../data/official-projects.json")).json();y(e),b(e)}v();function y(t){u.innerHTML=t.map(e=>{const{thumbnailImage:a,englishTitle:i,farsiTitle:n,id:o}=e;let c=sessionStorage.language==="en"?i:n;return`
+import{f as h,e as f}from"./index-C1xGNKjJ.js";const u=document.getElementById("project-cards-wraper"),s=document.querySelector(".project-info-modal");async function v(){const e=await(await fetch("../data/official-projects.json")).json();y(e),b(e)}v();function y(t){u.innerHTML=t.map(e=>{const{thumbnailImage:a,englishTitle:i,farsiTitle:n,id:o}=e;let c=sessionStorage.language==="en"?i:n;return`
                 <div id="${o}" class="project-card">
                     <img src="${a}" alt="project-preview">
                     <div>

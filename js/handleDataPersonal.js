@@ -70,7 +70,7 @@ function handleModalDataForEachCard(projectId) {
 
     ProjectDetailsModal.innerHTML = `
             <button id="close-modal-btn">
-                <img src="./public/icons/navbar-icons/close-icon.svg" alt="close-modal">
+                <img src="/icons/navbar-icons/close-icon.svg" alt="close-modal">
             </button>
             <div class="project-modal-content-wraper">
             <h2 id="dynamic-text" data-translation-id="blank">${title}</h2>

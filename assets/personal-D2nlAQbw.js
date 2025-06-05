@@ -10,7 +10,7 @@ import{f as h,e as j}from"./index-C1xGNKjJ.js";const c=[{id:1,thumbnailImage:"./
                 </div>
         `}).join(""),d()}function b(){const a=document.querySelectorAll(".project-card");Array.from(a).forEach(e=>{e.addEventListener("click",i=>{n.showModal(),n.style.animation="modal-open 500ms";let r=Number(i.currentTarget.id);y(r)})})}function y(a){let t=c.filter(o=>o.id===a),{showcaseImages:e,englishTitle:i,englishDescription:r,farsiTitle:s,farsiDescription:l,technologies:m,projectLink:g}=t[0],p=sessionStorage.language==="true"?s:i,u=sessionStorage.language==="true"?l:r;n.innerHTML=`
             <button id="close-modal-btn">
-                <img src="./public/icons/navbar-icons/close-icon.svg" alt="close-modal">
+                <img src="/icons/navbar-icons/close-icon.svg" alt="close-modal">
             </button>
             <div class="project-modal-content-wraper">
             <h2 id="dynamic-text" data-translation-id="blank">${p}</h2>

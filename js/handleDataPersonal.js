@@ -21,7 +21,7 @@ function createProjectCards() {
     const fixed = new URL("../public/icons/arrow-right-icon.svg", import.meta.url)
     projectCardsWraper.innerHTML = personalProjects.map(item => {
         const {thumbnailImage, englishTitle, farsiTitle, id} = item
-        let title = sessionStorage.language === "en" ? englishTitle: farsiTitle
+        let title = sessionStorage.language === "true" ? farsiTitle : englishTitle
         // console.log(thumbnailImage)
         // let shortenedTitle = title.substring(0, 8) + "..."
         return `
@@ -65,8 +65,8 @@ function openAndCloseDetails() {
 function handleModalDataForEachCard(projectId) {
     let filteredProjects = personalProjects.filter(item => item.id === projectId)
     let {showcaseImages, englishTitle, englishDescription, farsiTitle, farsiDescription, technologies, projectLink} = filteredProjects[0]
-    let title = sessionStorage.language === "en" ? englishTitle: farsiTitle
-    let description = sessionStorage.language === "en" ? englishDescription: farsiDescription
+    let title = sessionStorage.language === "true" ? farsiTitle : englishTitle
+    let description = sessionStorage.language === "true" ? farsiDescription : englishDescription
 
     ProjectDetailsModal.innerHTML = `
             <button id="close-modal-btn">
@@ -114,13 +114,13 @@ function addDynamicText() {
     allTexts.forEach(text => {
         translationId = text.dataset.translationId
         
-        if (sessionStorage.language === "fa") {
+        if (sessionStorage.language === "true") {
             text.innerHTML += fa[translationId]
 
-            allTexts.forEach(text => {
-                text.style.letterSpacing = '1px'
-                text.style.fontFamily = 'Noto Sans Arabic'                
-            })
+            // allTexts.forEach(text => {
+            //     text.style.letterSpacing = '1px'
+            //     text.style.fontFamily = 'Noto Sans Arabic'                
+            // })
         } else {
             text.innerHTML += en[translationId]
         }

@@ -2,6 +2,7 @@ import {animate, inView, stagger} from "motion"
 
 
 animate("#home-hero-section >  #my-main-info", { x: [20, 0], opacity: [0, 1]}, {duration: 1.5, delay: stagger(0.5)})
+animate(".circle-shape-inner", { rotate: 360}, {duration: 5, repeat: Infinity, easing: "linear"} )
 
 inView("#about-description-and-image", (intersectionInfo) => {
     animate(intersectionInfo.target, {y: [100, 0], opacity: [0, 1]}, {

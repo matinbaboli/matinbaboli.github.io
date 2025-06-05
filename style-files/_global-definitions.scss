@@ -75,6 +75,7 @@ html {
 }
 
 body {
+  position: relative;
   color: white;
 }
 
@@ -110,6 +111,154 @@ h2 {
   left: 0;
 }
 
+.tooltip {
+  position: relative;
+  cursor: pointer;
+}
+
+/* Tooltip box (hidden by default) */
+.tooltip::after {
+  content: attr(data-tooltip);
+  @include font-and-letterspacing-control($mainFont ,300 ,0.5px , 0.85);
+  position: absolute;
+  top: 120%; /* position above the element */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 8px 10px;
+  border-radius: 4px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 10;
+}
+
+/* Small arrow */
+.tooltip::before {
+  content: "";
+  position: absolute;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 8px;
+  border-style: solid;
+  border-color: transparent transparent #333 transparent;
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 9;
+}
+
+/* Show tooltip on hover or focus */
+.tooltip:hover::after,
+.tooltip:focus::after,
+.tooltip:hover::before,
+.tooltip:focus::before {
+  opacity: 1;
+  transform: translateX(-50%) translateY(8px);
+}
+
+
+.persian-mode [data-translation-id] {
+  font-family: 'Noto Sans Arabic', sans-serif;
+  letter-spacing: 1px;
+}
+
+.loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(135deg, #10131a 0%, #1a2333 100%);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 1;
+  pointer-events: all;
+}
+
+.loading-logo {
+  // width: 90px;
+  // height: 90px;
+  margin-bottom: 0;
+  margin-top: 10px;
+  /* No rotation animation */
+  filter: drop-shadow(0 0 16px $primary-color);
+  animation: loading-blink 1.2s infinite alternate;
+}
+
+@keyframes loading-blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.loading-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // width: 200px;
+  gap: 10px;
+  // margin-top: auto;
+  margin-bottom: 40px;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.loading-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: $primary-color;
+  opacity: 0.7;
+  animation: loading-bounce 1s infinite alternate;
+}
+
+.loading-dot:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.loading-dot:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes loading-bounce {
+  0% {
+    transform: translateY(0);
+    opacity: 0.7;
+  }
+  60% {
+    transform: translateY(-18px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 0.7;
+  }
+}
+
+.loading-text {
+  color: $primary-color;
+  font-family: $mainFont;
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  margin-top: 18px;
+  margin-bottom: 0;
+  text-shadow: 0 2px 16px $primary-color;
+  animation: loading-blink 1.2s infinite alternate;
+}
+
+.hide-loading {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 
 @include mid-screen-meida {
   :root {
@@ -124,3 +273,6 @@ h2 {
     --baseFontSize: 18px;
   }
 }
+
+
+

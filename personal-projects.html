@@ -19,12 +19,16 @@
                     <img src="./Logo-png.png" alt="logo"></img>
                 </a>
                 <div class="change-language-and-download-resume-container">
-                    <a id="text" data-translation-id="resume_download_btn" class="resume-download-btn" href="./MyResume.pdf" download>
+                    <a class="resume-download-btn tooltip" href="./MyResume.pdf" download data-tooltip="Download Resume">
+                        <img src="./public/icons/resume-download.svg"/>
                     </a>
-                    <select class="language-selector" name="language" id="language-selector-big-screen">
-                        <option value="en">Eng</option>
-                        <option value="fa">Fa</option>
-                    </select>
+                    <label class="switch" name="language">
+                        <input type="checkbox" id="language-selector-big-screen" />
+                        <span class="slider">
+                            <h3 class="fa-text">Fa</h3>
+                            <h3 class="en-text">En</h3>
+                        </span>
+                    </label>
                 </div>
             </div>
             <button id="open-menu-btn" class="open-menu-btn">
@@ -60,10 +64,11 @@
     
         </div>
         <nav id="navbar-links-id" class="navbar-links">
-
+            
             <button id="close-menu-btn" class="close-menu-btn">
-                <img src="icons/navbar-icons/close-icon.svg" alt="close-menu"></img>
+                <img src="icons/navbar-icons/close-icon.svg" alt="close-icon"></img>
             </button>
+
             <ul>
                 <li>
                     <a id="text" data-translation-id="nav_home_link" href="./index.html">
@@ -85,18 +90,20 @@
                         <img src="./icons/navbar-icons/official-projects-icon.svg" alt="official-projects-icon">
                     </a>
                 </li>
-                <li>
-                    <a id="text" data-translation-id="resume_download_btn" class="resume-download-btn" href="./MyResume.pdf" download>
-                    </a>
-                </li>
-                <li>
-                    <select class="language-selector" name="language" id="language-selector-small-screen">
-                        <option value="en">Eng</option> 
-                        <option value="fa">Fa</option> 
-                    </select>
-                </li>
-
             </ul>
+            <div style="display: flex; justify-content: space-around; align-items: center; margin-top: 100px;">
+                <a class="resume-download-btn tooltip" href="./MyResume.pdf" download data-tooltip="Download Resume">
+                    <img src="./public/icons/resume-download.svg"/>
+                </a>
+                <label class="switch" name="language" style="transform: scale(1.3);">
+                    <input type="checkbox" id="language-selector-small-screen" />
+                    <span class="slider">
+                        <h3 class="fa-text">Fa</h3>
+                        <h3 class="en-text">En</h3>
+                    </span>
+                </label>
+            </div>
+
         </nav>
     </header>
 

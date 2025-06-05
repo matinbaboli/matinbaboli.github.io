@@ -33,7 +33,7 @@
       adjust-color($primary-color, $lightness: +10%) 10%,
       adjust-color($secondary-color, $lightness: +10%) 70% 
     ),
-    url("../../images/texture35yu2.jpg");
+    url("/images/texture35yu2.jpg");
   background-size: cover;
   background-position: center;
   background-blend-mode: soft-light;

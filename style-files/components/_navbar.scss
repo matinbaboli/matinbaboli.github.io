@@ -102,11 +102,13 @@
   height: 30px;
 }
 
-.resume-download-btn {
-  padding: 7px 11px;
-  @include font-and-letterspacing-control($mainFont, 400, 2px, 0.7);
-  border: 1px solid $secondary-color;
-  border-radius: 7px;
+.resume-download-btn img {
+  width: 30px;
+  transition: all 0.2s ease-in-out;
+}
+
+.resume-download-btn:hover img {
+  filter: brightness(0.7);
 }
 
 .language-selector {
@@ -117,6 +119,72 @@
   border-radius: 5px;
   padding-inline: 10px;
 }
+
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 28px;
+}
+
+/* Hide the default checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $primary-color;
+  transition: background-color 0.3s;
+  border-radius: 34px;
+}
+
+/* The knob */
+.slider::before {
+  position: absolute;
+  content: "";
+  height: 22px;
+  width: 22px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: transform 0.3s;
+  border-radius: 100%;
+}
+
+/* Checked styles */
+input:checked + .slider {
+  background-color: $secondary-color;
+}
+
+input:checked + .slider::before {
+  transform: translateX(22px);
+}
+
+.en-text {
+  @include font-and-letterspacing-control($mainFont, 500, 0px, 0.7);
+  transform: translate(30px, -4px);
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+.fa-text {
+  @include font-and-letterspacing-control($mainFont, 500, 0px, 0.7);
+  transform: translate(8px, 9px);
+  user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}
+
 
 
 @include mid-screen-meida {

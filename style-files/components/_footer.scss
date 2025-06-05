@@ -7,23 +7,24 @@
     $secondary-color
   );
 
-  padding-block: 40px;
+  padding-top: 40px;
+  padding-bottom: 150px;
   padding-inline: $generalInlinePadding;
   @include font-and-letterspacing-control($mainFont, 400, 2px, 1.05);
   text-align: center;
 
   & p {
-    @include font-and-letterspacing-control($mainFont, 400, 3px);
+    @include font-and-letterspacing-control($mainFont, 500, 3px, 0.8);
     margin-top: 20px;
   }
 
   & li {
-    margin-bottom: 15px;
+    margin-bottom: 25px;
   }
 
   & img {
     display: none;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
   }
 }
 

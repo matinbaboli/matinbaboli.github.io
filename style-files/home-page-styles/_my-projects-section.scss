@@ -29,6 +29,10 @@
   }
 }
 
+.projects-links-container {
+  overflow: hidden;
+}
+
 @include mid-screen-meida {
   .projects-section {
     &-content {

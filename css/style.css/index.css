@@ -527,6 +527,7 @@ input:checked + .slider::before {
   font-weight: 300;
   letter-spacing: 4px;
   font-size: calc(var(--baseFontSize) * 1.3);
+  margin-bottom: 30px;
 }
 
 .hero-background-image-wraper {
@@ -541,39 +542,6 @@ input:checked + .slider::before {
   background-position: center;
   background-blend-mode: soft-light;
   transition: opacity 100ms;
-}
-
-.hero-shapes-container {
-  position: relative;
-  width: 100%;
-}
-.hero-shapes-container :nth-child(1), .hero-shapes-container :nth-child(2) {
-  position: absolute;
-  top: 10px;
-  left: -100px;
-  width: 250px;
-}
-.hero-shapes-container :nth-child(1) {
-  transform: rotate(-30deg) translate(100px, 150px);
-  width: 250px;
-}
-
-.hero-section-shape-big {
-  position: absolute;
-  z-index: -2;
-  top: 0;
-  left: 0px;
-  filter: drop-shadow(5px -5px 5px #0072eb);
-  width: 165px;
-}
-
-.hero-section-shape-small {
-  position: absolute;
-  z-index: -2;
-  top: 120px;
-  left: 150px;
-  width: 110px;
-  filter: drop-shadow(3px -4px 5px #c2a875);
 }
 
 @media (min-width: 700px) {

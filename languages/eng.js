@@ -2,11 +2,11 @@ export const en ={
     blank: "",
     nav_home_link: "Home",
     nav_contact_me_link: "Contact me",
-    nav_personal_projects_link: "Personal Projects",
+    nav_personal_projects_link: "Projects",
     nav_official_projects_link: "Official Projects",
     resume_download_btn: "My Resume",
     about_me_title: "About Me",
-    about_me_first_p: "Hi my name is Matin, i am a front-end web developer and a computer engineering student. I create easy to use websites with good and consistant UI design.",
+    about_me_first_p: "Hi my name is Matin, i am a front-end web developer. I create easy to use websites with good and consistant UI design.",
     about_me_second_p: "I am fueled by my passion for creating visully pleasing and efficient websites and i'm always trying to learn new technologies and better ways to code like a hungry giant.",
     about_me_third_p: "Currently i am working as a freelancer and also open to job offers.",
     my_projects_title: "My Projects",
@@ -26,5 +26,6 @@ export const en ={
     technologies: "Technologies",
     client: "Client",
     view_project: "View Project",
-    official_projects_page_title: "Official Projects"
+    official_projects_page_title: "Official Projects",
+    hero_checkout_projects: "My Projects"
 }
